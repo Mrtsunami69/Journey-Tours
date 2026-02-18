@@ -20,8 +20,8 @@ h1, h2, h3 {
   color: #111827;
 }
 
-h1 { font-size: clamp(3.5rem, 8vw, 6rem); line-height: 1.1; }
-h2 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 2.5rem; }
+h1 { font-size: clamp(3.5rem, 8vw, 6.5rem); line-height: 1.1; margin-bottom: 1.5rem; }
+h2 { font-size: clamp(2.5rem, 6vw, 4.2rem); margin-bottom: 3rem; text-align: center; }
 h3 { font-size: 1.75rem; margin-bottom: 1rem; }
 
 /* Navbar */
@@ -213,19 +213,14 @@ h3 { font-size: 1.75rem; margin-bottom: 1rem; }
   color: #5c9f92;
 }
 
-/* Sections */
-section {
+/* Why Section */
+.why-section {
   padding: 8rem 5% 6rem;
-}
-
-h2 {
-  font-size: clamp(2.5rem, 6vw, 4.2rem);
-  margin-bottom: 3rem;
+  background: #ffffff;
   text-align: center;
 }
 
-/* Grid */
-.why-grid, .dest-grid {
+.why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2.5rem;
@@ -233,17 +228,39 @@ h2 {
   margin: 0 auto;
 }
 
-/* Cards */
-.why-card, .dest-card, .service-card {
-  background: white;
+.why-card {
+  background: #f9fafb;
   border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  transition: all 0.4s ease;
-  text-align: center;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
-.why-card:hover, .dest-card:hover, .service-card:hover {
+.why-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Destinations */
+.destinations {
+  padding: 8rem 5% 6rem;
+  background: #f8f9fa;
+}
+
+.dest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.dest-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: all 0.4s ease;
+}
+
+.dest-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
@@ -252,29 +269,36 @@ h2 {
   width: 100%;
   height: 240px;
   object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
 }
 
-.dest-info p {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #5c9f92;
-}
-
-/* Contact */
-.contact {
-  background: #f8f9fa;
+.dest-info {
+  padding: 1.8rem;
   text-align: center;
 }
 
-.contact-info {
+.dest-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dest-info p {
+  color: #6b7280;
+}
+
+/* Contact / CTA */
+.cta-section {
+  padding: 8rem 5% 6rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+.contact-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2.5rem 4rem;
   margin: 2rem 0 3rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .cta-btn {
@@ -282,11 +306,11 @@ h2 {
   color: white;
   border: none;
   padding: 1.2rem 3.5rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
