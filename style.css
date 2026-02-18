@@ -367,6 +367,61 @@ footer {
 .footer-links a:hover {
   color: #d4a373;
 }
+/* Fix text placement – center vertically with breathing room */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 820px;
+  display: flex;
+  align-items: center;          /* Vertical center */
+  justify-content: center;      /* Horizontal center */
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1100px;
+  padding: 0 4rem;
+  width: 100%;
+  /* Add top offset to push text down from navbar */
+  margin-top: -60px;            /* Main fix – adjust this number if needed */
+}
+
+/* Make headline & subtext breathe */
+.hero h1 {
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  color: #2d2d2d;
+  margin-bottom: 1.4rem;
+  line-height: 1;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.45);
+}
+
+.hero p {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  color: #4a4a4a;
+  max-width: 760px;
+  margin: 0 auto 4rem;
+  font-weight: 300;
+}
+
+/* Extra breathing room on mobile */
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: -30px;           /* Less offset on small screens */
+    padding: 0 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -386,3 +441,4 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
