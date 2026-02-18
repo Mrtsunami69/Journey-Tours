@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JourneyWell Tours - College Project</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar (only changed Hotels link) -->
+  <nav class="navbar">
+    <div class="logo">
+      <h1>JourneyWell</h1>
+      <span>Tours</span>
+    </div>
+    <div class="nav-links">
+      <a href="#flights" onclick="scrollToSection('flights')">Flights</a>
+      <a href="hotels.html" target="_blank">Hotels</a> <!-- ← Only this line changed: opens new tab -->
+      <a href="#packages-info" onclick="scrollToSection('packages-info')">Packages</a>
+      <a href="#destinations" onclick="scrollToSection('destinations')">Cars</a>
+      <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Search -->
+  <section class="hero" id="flights">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Plan Your Next Trip</h1>
+      <p>Find the best flights, hotels, cars & packages</p>
+
+      <div class="search-box">
+        <div class="tabs">
+          <button class="tab active">Flights</button>
+          <button class="tab">Hotels</button>
+          <button class="tab">Cars</button>
+          <button class="tab">Packages</button>
+        </div>
+
+        <form class="search-form">
+          <div class="row">
+            <select>
+              <option>Round-trip</option>
+              <option>One-way</option>
+            </select>
+
+            <input type="text" placeholder="From (city or airport)" required>
+            <i class="fas fa-arrow-right arrow"></i>
+            <input type="text" placeholder="To (city or airport)" required>
+          </div>
+
+          <div class="row">
+            <input type="date" placeholder="Depart" required>
+            <input type="date" placeholder="Return">
+            <select>
+              <option>1 adult</option>
+              <option>2 adults</option>
+              <option>Family</option>
+            </select>
+            <select>
+              <option>Economy</option>
+              <option>Business</option>
+            </select>
+          </div>
+
+          <button type="submit" class="search-btn">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Destinations -->
+  <section class="destinations" id="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="grid">
+      <div class="card" onclick="openModal('beach')">
+        <img src="images/destination1.jpg" alt="Beach">
+        <div class="info">
+          <h3>Beach Resorts</h3>
+          <p>from $799</p>
+        </div>
+      </div>
+      <div class="card" onclick="openModal('theme')">
+        <img src="images/destination2.jpg" alt="Theme Park">
+        <div class="info">
+          <h3>Theme Parks</h3>
+          <p>from $599</p>
+        </div>
+      </div>
+      <div class="card" onclick="openModal('nature')">
+        <img src="images/destination3.jpg" alt="Nature">
+        <div class="info">
+          <h3>Nature Adventures</h3>
+          <p>from $699</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hotels Info Bubble -->
+  <section class="info-bubble" id="hotels-info">
+    <h2>Hotels & Stays</h2>
+    <p>We offer family-friendly hotels, resorts, and boutique stays with the best rates and kid perks.</p>
+    <ul>
+      <li>All-inclusive options</li>
+      <li>Free kids stay in many properties</li>
+      <li>Breakfast included deals</li>
+      <li>Secure booking with cancellation flexibility</li>
+    </ul>
+  </section>
+
+  <!-- Packages Info Bubble -->
+  <section class="info-bubble" id="packages-info">
+    <h2>Vacation Packages</h2>
+    <p>Our curated packages include flights + hotel + activities — perfect for stress-free family trips.</p>
+    <ul>
+      <li>Bundle discounts up to 30%</li>
+      <li>Seasonal holiday deals</li>
+      <li>Early booking savings</li>
+      <li>Customizable for your family size</li>
+    </ul>
+  </section>
+
+  <!-- Trust -->
+  <section class="trust">
+    <div class="trust-items">
+      <div><i class="fas fa-shield-alt"></i> Secure Booking</div>
+      <div><i class="fas fa-dollar-sign"></i> Best Price Guarantee</div>
+      <div><i class="fas fa-headset"></i> 24/7 Support</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or ready to book? Reach out!</p>
+    <div class="contact-info">
+      <p><strong>Email:</strong> info@journeywelltours.com</p>
+      <p><strong>Phone:</strong> +1 (905) 555-0123</p>
+      <p><strong>Address:</strong> Hamilton, Ontario, Canada</p>
+    </div>
+    <a href="mailto:info@journeywelltours.com" class="contact-btn">Send us an Email</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 JourneyWell Tours - College Project</p>
+    <div class="links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Modal for destination details -->
+  <div id="destinationModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle">Destination Details</h2>
+      <p id="modalDesc">More info coming soon...</p>
+      <p><strong>Price starting from:</strong> <span id="modalPrice">$799</span></p>
+      <button class="modal-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Modal for destinations
+    function openModal(type) {
+      const modal = document.getElementById("destinationModal");
+      const title = document.getElementById("modalTitle");
+      const desc = document.getElementById("modalDesc");
+      const price = document.getElementById("modalPrice");
+
+      if (type === "beach") {
+        title.textContent = "Beach Resorts";
+        desc.textContent = "Relax on safe, family-friendly beaches with kids clubs, shallow waters, and all-inclusive options.";
+        price.textContent = "$799";
+      } else if (type === "theme") {
+        title.textContent = "Theme Parks";
+        desc.textContent = "Magical adventures for kids and relaxing breaks for parents – perfect family memories.";
+        price.textContent = "$599";
+      } else if (type === "nature") {
+        title.textContent = "Nature Adventures";
+        desc.textContent = "Safe, educational outdoor trips – hiking, wildlife spotting, and nature for all ages.";
+        price.textContent = "$699";
+      }
+
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("destinationModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("destinationModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+
+    // Scroll to section
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
