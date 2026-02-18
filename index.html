@@ -3,13 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Search flights, hotels, rental cars & vacation packages with JourneyWell Tours – best prices & easy planning."/>
-  <title>JourneyWell Tours – Search Flights, Hotels & More</title>
+  <title>JourneyWell – Search Flights, Hotels & Rental Cars</title>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <link rel="stylesheet" href="style.css">
@@ -18,24 +14,22 @@
 
   <!-- Top bar -->
   <header class="top-bar">
-    <div class="logo">
-      <h1>JourneyWell</h1>
-      <span>Tours</span>
-    </div>
-    <div class="user-actions">
-      <a href="#" class="sign-in">Sign in</a>
-      <button class="menu-btn"><i class="fas fa-bars"></i></button>
+    <button class="menu"><i class="fas fa-bars"></i></button>
+    <div class="logo">JOURNEY</div>
+    <div class="actions">
+      <button class="heart"><i class="far fa-heart"></i></button>
+      <button class="user"><i class="far fa-user"></i></button>
     </div>
   </header>
 
-  <!-- Hero Search – very KAYAK-like -->
-  <section class="hero">
-    <div class="hero-inner">
+  <!-- Hero search -->
+  <main class="hero">
+    <div class="hero-content">
       <h1>Start your travel planning here</h1>
       <p>Search Flights, Hotels & Rental Cars</p>
 
       <div class="search-box">
-        <div class="search-tabs">
+        <div class="tabs">
           <button class="tab active">Flights</button>
           <button class="tab">Stays</button>
           <button class="tab">Cars</button>
@@ -43,114 +37,102 @@
         </div>
 
         <form class="search-form">
-          <div class="form-row">
-            <div class="input-group trip-type">
-              <select>
-                <option>Round-trip</option>
-                <option>One-way</option>
-                <option>Multi-city</option>
-              </select>
-            </div>
+          <div class="row-1">
+            <select class="trip-type">
+              <option>Round-trip</option>
+              <option>One-way</option>
+              <option>Multi-city</option>
+            </select>
 
-            <div class="input-group">
-              <input type="text" placeholder="From (city or airport)" required>
-            </div>
-
-            <div class="input-group arrow">
-              <i class="fas fa-arrow-right"></i>
-            </div>
-
-            <div class="input-group">
-              <input type="text" placeholder="To (city or airport)" required>
+            <div class="from-to">
+              <div class="field">
+                <input type="text" placeholder="Toronto (YTO)" value="Toronto (YTO)">
+              </div>
+              <button type="button" class="swap"><i class="fas fa-exchange-alt"></i></button>
+              <div class="field">
+                <input type="text" placeholder="To?">
+              </div>
             </div>
           </div>
 
-          <div class="form-row">
-            <div class="input-group date">
-              <input type="date" placeholder="Departure" required>
+          <div class="row-2">
+            <div class="field date">
+              <input type="date" placeholder="Departure">
             </div>
-
-            <div class="input-group date">
+            <div class="field date">
               <input type="date" placeholder="Return">
             </div>
-
-            <div class="input-group">
+            <div class="field">
               <select>
                 <option>1 adult</option>
                 <option>2 adults</option>
                 <option>2 adults, 1 child</option>
-                <option>Family</option>
               </select>
             </div>
-
-            <div class="input-group">
+            <div class="field">
               <select>
                 <option>Economy</option>
-                <option>Premium Economy</option>
+                <option>Premium</option>
                 <option>Business</option>
-                <option>First</option>
               </select>
             </div>
+            <button type="submit" class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
           </div>
-
-          <button type="submit" class="search-button">
-            <i class="fas fa-search"></i> Search
-          </button>
         </form>
       </div>
     </div>
-  </section>
+  </main>
 
   <!-- Popular Destinations -->
   <section class="popular">
-    <h2>Popular Destinations</h2>
-    <div class="dest-grid">
-      <div class="dest-card">
-        <img src="images/destination1.jpg" alt="Las Vegas">
-        <div class="dest-info">
-          <h3>Las Vegas</h3>
-          <p>CARS · FLIGHTS · HOTELS</p>
-        </div>
+    <div class="popular-grid">
+      <div class="popular-item">
+        <h3>Las Vegas</h3>
+        <p>CARS · FLIGHTS · HOTELS</p>
       </div>
-      <div class="dest-card">
-        <img src="images/destination2.jpg" alt="New York">
-        <div class="dest-info">
-          <h3>New York</h3>
-          <p>CARS · FLIGHTS · HOTELS</p>
-        </div>
+      <div class="popular-item">
+        <h3>New York</h3>
+        <p>CARS · FLIGHTS · HOTELS</p>
       </div>
-      <div class="dest-card">
-        <img src="images/destination3.jpg" alt="London">
-        <div class="dest-info">
-          <h3>London</h3>
-          <p>CARS · FLIGHTS · HOTELS</p>
-        </div>
+      <div class="popular-item">
+        <h3>London</h3>
+        <p>CARS · FLIGHTS · HOTELS</p>
       </div>
-      <!-- Add more as needed -->
+      <div class="popular-item">
+        <h3>Paris</h3>
+        <p>CARS · FLIGHTS · HOTELS</p>
+      </div>
+      <div class="popular-item">
+        <h3>Los Angeles</h3>
+        <p>CARS · FLIGHTS · HOTELS</p>
+      </div>
+      <div class="popular-item">
+        <h3>Miami</h3>
+        <p>CARS · FLIGHTS · HOTELS</p>
+      </div>
+      <!-- Add more rows as needed -->
     </div>
   </section>
 
-  <!-- Tools Section -->
+  <!-- For travel pros -->
   <section class="tools">
     <h2>For travel pros</h2>
     <div class="tools-grid">
       <div class="tool-card">
-        <i class="fas fa-robot"></i>
         <h3>JourneyWell.ai BETA</h3>
         <p>Get travel questions answered</p>
       </div>
       <div class="tool-card">
-        <i class="fas fa-clock"></i>
         <h3>Best Time to Travel</h3>
         <p>Know when to save</p>
       </div>
       <div class="tool-card">
-        <i class="fas fa-map"></i>
         <h3>Explore</h3>
         <p>See destinations on your budget</p>
       </div>
       <div class="tool-card">
-        <i class="fas fa-suitcase"></i>
         <h3>Trips</h3>
         <p>Keep all your plans in one place</p>
       </div>
@@ -189,11 +171,6 @@
         <a href="#">Privacy</a>
         <a href="#">Terms & Conditions</a>
         <a href="#">Ad Choices</a>
-      </div>
-      <div class="social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </footer>
