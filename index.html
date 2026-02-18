@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TravelCo - Explore the World</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="TravelCo - Find cheap flights, hotels, packages and explore top destinations worldwide."/>
+  <title>TravelCo - Cheap Flights & Dream Vacations</title>
+  <!-- Google Fonts (Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,11 +21,55 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background-image: url('images/hero.jpg')">
-    <h2>Explore the World with TravelCo</h2>
-    <p>Your dream vacation starts here</p>
-    <a href="#contact" class="btn">Book Now</a>
+  <!-- Hero Section with Search Form -->
+  <section class="hero" id="flights">
+    <div class="hero-bg"></div> <!-- Background handled in CSS -->
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>Explore the World with TravelCo</h2>
+      <p>Your dream vacation starts here — find the best deals today</p>
+
+      <!-- Main Search Form -->
+      <div class="search-form-container">
+        <form class="search-form">
+          <div class="trip-type">
+            <label><input type="radio" name="trip" value="roundtrip" checked> Round-trip</label>
+            <label><input type="radio" name="trip" value="oneway"> One-way</label>
+            <label><input type="radio" name="trip" value="multicity"> Multi-city</label>
+          </div>
+
+          <div class="form-grid">
+            <div class="input-group">
+              <label>From</label>
+              <input type="text" placeholder="City or Airport" required>
+            </div>
+            <div class="input-group">
+              <label>To</label>
+              <input type="text" placeholder="City or Airport" required>
+            </div>
+            <div class="input-group">
+              <label>Depart</label>
+              <input type="date" required>
+            </div>
+            <div class="input-group">
+              <label>Return</label>
+              <input type="date">
+            </div>
+            <div class="input-group">
+              <label>Passengers</label>
+              <select required>
+                <option value="1">1 Adult</option>
+                <option value="2">2 Adults</option>
+                <option value="3">3 Adults</option>
+                <option value="4">4 Adults</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-search">Search Flights</button>
+        </form>
+      </div>
+    </div>
   </section>
 
   <!-- Services Section -->
@@ -31,64 +78,18 @@
     <div class="service-list">
       <div class="service">
         <h3>Flight Booking</h3>
-        <p>Book flights at the best prices.</p>
+        <p>Book flights at the best prices from hundreds of airlines.</p>
       </div>
       <div class="service">
         <h3>Hotel Booking</h3>
-        <p>Comfortable stays worldwide.</p>
+        <p>Comfortable stays worldwide — hotels, resorts & more.</p>
       </div>
       <div class="service">
         <h3>Tour Packages</h3>
-        <p>Curated tours for every traveler.</p>
+        <p>Curated vacation packages for every type of traveler.</p>
       </div>
     </div>
   </section>
-  <section class="flight-search">
-  <div class="search-card">
-    <h2>Plan Your Perfect Trip</h2>
-    <p>Find flights, explore destinations, and start your adventure</p>
-
-    <form>
-      <div class="input-row">
-        <div class="input-group">
-          <label>From</label>
-          <input type="text" placeholder="City or Airport">
-        </div>
-        <div class="input-group">
-          <label>To</label>
-          <input type="text" placeholder="City or Airport">
-        </div>
-      </div>
-
-      <div class="input-row">
-        <div class="input-group">
-          <label>Depart</label>
-          <input type="date">
-        </div>
-        <div class="input-group">
-          <label>Return</label>
-          <input type="date">
-        </div>
-      </div>
-
-      <div class="input-row">
-        <div class="input-group">
-          <label>Passengers</label>
-          <select>
-            <option>1 Adult</option>
-            <option>2 Adults</option>
-            <option>3 Adults</option>
-            <option>4 Adults</option>
-          </select>
-        </div>
-        <div class="input-group full-width">
-          <button type="submit" class="btn-search">Search Flights</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</section>
-
 
   <!-- Destinations Section -->
   <section id="destinations" class="destinations">
@@ -113,11 +114,12 @@
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>Email: info@travelco.com | Phone: +1 234 567 890</p>
+    <p>We're here to help plan your next adventure!</p>
   </section>
 
   <!-- Footer -->
   <footer>
-    &copy; 2026 TravelCo. All rights reserved.
+    © 2026 TravelCo. All rights reserved.
   </footer>
 
 </body>
