@@ -1,4 +1,4 @@
-/* Safe fallback version - copy-paste this to test */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -6,80 +6,271 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: #f9fafb;
-  color: #111827;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #1a1a1a;
+  background: #f8f9fa;
   line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   padding: 1rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   z-index: 1000;
 }
 
 .logo h1 {
   font-size: 1.8rem;
+  color: #ff5a5f; /* KAYAK red */
+  font-weight: 700;
 }
 
 .nav-links a {
-  margin-left: 2rem;
-  color: #374151;
+  margin-left: 2.5rem;
+  color: #333;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
+.nav-links a:hover {
+  color: #ff5a5f;
+}
+
+/* Hero – KAYAK-style big search */
 .hero {
   height: 100vh;
-  background: url('images/hero.jpg') center/cover;
+  min-height: 720px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/hero.jpg') center/cover no-repeat;
+  filter: brightness(0.65);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
 }
 
 .hero-content {
-  max-width: 900px;
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
   padding: 0 2rem;
 }
 
 .hero h1 {
-  font-size: 4.5rem;
-  margin-bottom: 1rem;
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 .hero p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  margin-bottom: 3rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.search-form-container {
-  background: rgba(255,255,255,0.9);
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 900px;
-  margin: 2rem auto;
-  color: #111827;
+/* Search Container – KAYAK style */
+.search-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  max-width: 980px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.search-tabs {
+  display: flex;
+  background: #f1f3f5;
+  padding: 0.8rem 1.5rem;
+}
+
+.tab {
+  padding: 0.8rem 1.8rem;
+  background: transparent;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  background: white;
+  border-radius: 10px;
+  color: #ff5a5f;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.search-form {
+  padding: 2rem 2.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  flex: 1;
+  min-width: 220px;
+  position: relative;
+}
+
+.input-group label {
+  position: absolute;
+  top: -8px;
+  left: 16px;
+  background: white;
+  padding: 0 8px;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.search-btn {
+  width: 100%;
+  background: #ff5a5f;
+  color: white;
+  border: none;
+  padding: 1.2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-btn:hover {
+  background: #e04e53;
+}
+
+/* Trust Bar */
+.trust-bar {
+  background: #fff;
+  padding: 2.5rem 5%;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.trust-items {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+/* Destinations */
+.destinations {
+  padding: 5rem 5% 6rem;
+  background: #f8f9fa;
 }
 
 .dest-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 4rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dest-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.dest-card:hover {
+  transform: translateY(-6px);
 }
 
 .dest-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 8px;
+}
+
+.dest-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.dest-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.dest-info p {
+  color: #ff5a5f;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  background: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 3rem 5%;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar { padding: 1rem 5%; }
+  .nav-links { gap: 1.2rem; font-size: 0.95rem; }
+  .hero h1 { font-size: 3rem; }
+  .search-container { margin: 1rem; }
+  .form-row { flex-direction: column; }
+  .trust-items { gap: 2rem; }
 }
