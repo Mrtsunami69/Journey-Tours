@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="JourneyWell Tours - Find cheap flights, hotels, packages and explore top destinations worldwide."/>
-  <title>JourneyWell Tours - Cheap Flights & Dream Vacations</title>
-  <!-- Google Fonts (Poppins) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="JourneyWell Tours – Discover cheap flights, luxury hotels, curated packages and unforgettable destinations worldwide."/>
+  <meta name="keywords" content="cheap flights, travel agency, vacation packages, hotels, dream destinations"/>
+  <title>JourneyWell Tours – Luxury Travel & Affordable Adventures</title>
+
+  <!-- Google Fonts: elegant + modern -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Premium Navbar -->
   <nav class="navbar">
-    <h1>JourneyWell Tours</h1>
+    <div class="logo">
+      <h1>JourneyWell</h1>
+      <span>Tours</span>
+    </div>
     <div class="nav-links">
-      <a href="#services">Services</a>
+      <a href="#flights">Flights</a>
+      <a href="#hotels">Hotels</a>
+      <a href="#packages">Packages</a>
       <a href="#destinations">Destinations</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero Section with Search Form -->
+  <!-- Hero – Aspirational & inviting -->
   <section class="hero" id="flights">
-    <div class="hero-bg"></div> <!-- Background handled in CSS -->
+    <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h2>Explore the World with JourneyWell Tours</h2>
-      <p>Your dream vacation starts here — find the best deals today</p>
+      <h1>Discover the World<br><span>Your Way</span></h1>
+      <p>Curated journeys, unbeatable flights, and memories that last a lifetime.</p>
 
-      <!-- Main Search Form -->
+      <!-- Professional Search Form -->
       <div class="search-form-container">
         <form class="search-form">
           <div class="trip-type">
@@ -42,11 +49,11 @@
           <div class="form-grid">
             <div class="input-group">
               <label>From</label>
-              <input type="text" placeholder="City or Airport" required>
+              <input type="text" placeholder="City or airport" required autocomplete="off">
             </div>
             <div class="input-group">
               <label>To</label>
-              <input type="text" placeholder="City or Airport" required>
+              <input type="text" placeholder="City or airport" required autocomplete="off">
             </div>
             <div class="input-group">
               <label>Depart</label>
@@ -56,74 +63,111 @@
               <label>Return</label>
               <input type="date">
             </div>
-            <div class="input-group">
-              <label>Passengers</label>
+            <div class="input-group passengers">
+              <label>Travelers</label>
               <select required>
-                <option value="1">1 Adult</option>
-                <option value="2">2 Adults</option>
-                <option value="3">3 Adults</option>
-                <option value="4">4 Adults</option>
+                <option>1 adult</option>
+                <option>2 adults</option>
+                <option>1 adult, 1 child</option>
+                <option>2 adults, 1 child</option>
               </select>
             </div>
           </div>
 
-          <button type="submit" class="btn-search">Search Flights</button>
+          <button type="submit" class="search-btn">Find My Journey</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Trust & Services -->
+  <section class="trust-bar">
+    <div class="trust-items">
+      <div class="trust-item">
+        <span class="icon">✓</span>
+        <p>Best Price Guarantee</p>
+      </div>
+      <div class="trust-item">
+        <span class="icon">🔒</span>
+        <p>Secure Booking</p>
+      </div>
+      <div class="trust-item">
+        <span class="icon">24/7</span>
+        <p>Support Always</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services – Clean cards -->
   <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service-list">
-      <div class="service">
-        <h3>Flight Booking</h3>
-        <p>Book flights at the best prices from hundreds of airlines.</p>
+    <h2>Why Journey with Us</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Expert Flight Deals</h3>
+        <p>Access exclusive fares from 500+ airlines worldwide.</p>
       </div>
-      <div class="service">
-        <h3>Hotel Booking</h3>
-        <p>Comfortable stays worldwide — hotels, resorts & more.</p>
+      <div class="service-card">
+        <h3>Luxury & Comfort Stays</h3>
+        <p>Handpicked hotels, resorts & boutique properties.</p>
       </div>
-      <div class="service">
-        <h3>Tour Packages</h3>
-        <p>Curated vacation packages for every type of traveler.</p>
+      <div class="service-card">
+        <h3>Curated Journey Packages</h3>
+        <p>Stress-free vacations designed for every traveler.</p>
       </div>
     </div>
   </section>
 
-  <!-- Destinations Section -->
+  <!-- Destinations – Heroic cards -->
   <section id="destinations" class="destinations">
-    <h2>Top Destinations</h2>
-    <div class="dest-list">
-      <div class="dest">
-        <img src="images/destination1.jpg" alt="Paris">
-        <h3>Paris</h3>
+    <h2>Trending Escapes</h2>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <img src="images/destination1.jpg" alt="Santorini">
+        <div class="dest-info">
+          <h3>Santorini, Greece</h3>
+          <p>From $799</p>
+        </div>
       </div>
-      <div class="dest">
-        <img src="images/destination2.jpg" alt="Bali">
-        <h3>Bali</h3>
+      <div class="dest-card">
+        <img src="images/destination2.jpg" alt="Maldives">
+        <div class="dest-info">
+          <h3>Maldives</h3>
+          <p>From $1,499</p>
+        </div>
       </div>
-      <div class="dest">
-        <img src="images/destination3.jpg" alt="New York">
-        <h3>New York</h3>
+      <div class="dest-card">
+        <img src="images/destination3.jpg" alt="Kyoto">
+        <div class="dest-info">
+          <h3>Kyoto, Japan</h3>
+          <p>From $1,199</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact & CTA -->
   <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@JourneyWell Tours.com | Phone: +1 234 567 890</p>
-    <p>We're here to help plan your next adventure!</p>
+    <h2>Ready to Begin Your Journey?</h2>
+    <p>Contact our travel experts today</p>
+    <div class="contact-info">
+      <p><strong>Email:</strong> journeys@journeywelltours.com</p>
+      <p><strong>Phone:</strong> +1 (905) 555-0123</p>
+      <p><strong>Office:</strong> Hamilton, Ontario, Canada</p>
+    </div>
+    <button class="cta-btn">Get in Touch</button>
   </section>
 
   <!-- Footer -->
   <footer>
-    © 2026 JourneyWell Tours. All rights reserved.
+    <div class="footer-content">
+      <p>© 2026 JourneyWell Tours. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">About Us</a>
+      </div>
+    </div>
   </footer>
 
 </body>
 </html>
-
-
