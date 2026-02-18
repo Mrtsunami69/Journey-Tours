@@ -20,7 +20,7 @@ h1, h2, h3 {
   letter-spacing: -0.5px;
 }
 
-/* Navbar – Clean, premium */
+/* Navbar – Clean premium */
 .navbar {
   position: fixed;
   top: 0;
@@ -42,6 +42,12 @@ h1, h2, h3 {
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .logo h1 {
   font-size: 1.9rem;
   color: #2d2d2d;
@@ -49,8 +55,10 @@ h1, h2, h3 {
 }
 
 .logo span {
+  font-size: 0.9rem;
   color: #5c9f92;
   font-weight: 400;
+  margin-top: -4px;
 }
 
 .nav-links {
@@ -71,7 +79,7 @@ h1, h2, h3 {
   color: #5c9f92;
 }
 
-/* Hero – Aspirational & calming */
+/* Hero – Aspirational luxury */
 .hero {
   position: relative;
   height: 100vh;
