@@ -1,35 +1,402 @@
-/* General */
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Navbar */
-.navbar { background: #0077b6; color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
-.nav-links a { color: white; margin-left: 1rem; text-decoration: none; font-weight: bold; }
-.nav-links a:hover { text-decoration: underline; }
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a2e;
+  background: #f0f4f8;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
 
-/* Hero */
-.hero { height: 80vh; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
-.hero h2 { font-size: 3rem; margin: 0; }
-.hero p { font-size: 1.2rem; margin: 1rem 0; }
-.hero .btn { background: #ffba08; color: black; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 5px; font-weight: bold; }
-.hero .btn:hover { background: #ffc857; }
+/* Navbar – Premium glass + gradient */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(15, 52, 96, 0.92), rgba(26, 26, 46, 0.88));
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  color: white;
+  padding: 1.2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #00faff, #ffd700, #ff6bcb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 6s linear infinite;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.8rem;
+}
+
+.nav-links a {
+  color: #e0f7ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background: #00faff;
+  transition: width 0.35s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00faff;
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hero – Dopamine powerhouse */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('images/hero.jpg') center/cover no-repeat fixed;
+  filter: brightness(1.08) contrast(1.12) saturate(1.18);
+  transform: scale(1.08);
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero:hover .hero-bg {
+  transform: scale(1.18) translateY(-40px);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 52, 96, 0.48) 0%,
+    rgba(26, 26, 46, 0.68) 60%,
+    rgba(15, 52, 96, 0.82) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1200px;
+  padding: 0 3rem;
+  color: white;
+}
+
+.hero h1 {
+  font-size: clamp(3.5rem, 9vw, 6.2rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  background: linear-gradient(90deg, #00faff, #ffd700, #ff6bcb, #00faff);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.4rem;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  animation: shine 7s linear infinite;
+}
+
+@keyframes shine {
+  to { background-position: 300% center; }
+}
+
+.hero p {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  margin: 1.5rem 0 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.96;
+  color: #e0f7ff;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.5);
+}
+
+/* Search Form – Glass + glow + float */
+.search-form-container {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  border-radius: 28px;
+  padding: 3rem 3.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: floatIn 1.5s ease-out forwards;
+  transform: translateY(80px);
+}
+
+@keyframes floatIn {
+  0% { opacity: 0; transform: translateY(140px) scale(0.94); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.search-form-container:hover,
+.search-form-container:focus-within {
+  box-shadow: 0 40px 100px rgba(0, 212, 255, 0.35);
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+
+.trip-type {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.6rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group label {
+  position: absolute;
+  top: -10px;
+  left: 18px;
+  background: white;
+  padding: 0 10px;
+  font-size: 0.9rem;
+  color: #555;
+  pointer-events: none;
+  font-weight: 500;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 1.3rem 1.4rem;
+  border: 2px solid #ddd;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  transition: all 0.35s ease;
+  background: rgba(255,255,255,0.7);
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 5px rgba(0, 212, 255, 0.18);
+  outline: none;
+}
+
+/* Search Button – Shine + pulse + lift */
+.search-btn {
+  grid-column: 1 / -1;
+  background: linear-gradient(90deg, #00d4ff, #0077b6, #00d4ff);
+  background-size: 200% auto;
+  color: white;
+  border: none;
+  padding: 1.4rem 4.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 12px 35px rgba(0, 212, 255, 0.45);
+  transition: all 0.45s ease;
+  animation: bgMove 6s linear infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.search-btn:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 25px 60px rgba(0, 212, 255, 0.6);
+}
+
+.search-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  transition: left 0.8s;
+}
+
+.search-btn:hover::before {
+  left: 150%;
+}
+
+@keyframes bgMove {
+  to { background-position: 200% center; }
+}
+
+/* Pulse (optional – keep if you like the heartbeat effect) */
+.pulse {
+  animation: pulse 2.2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0,212,255,0.6); }
+  70% { box-shadow: 0 0 0 20px rgba(0,212,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,212,255,0); }
+}
+
+/* Cards – Floating + glowing hover */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-grid, .dest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.8rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.service-card, .dest-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid rgba(0,212,255,0.08);
+}
+
+.service-card:hover, .dest-card:hover {
+  transform: translateY(-16px) scale(1.04);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+  border-color: rgba(0,212,255,0.25);
+}
+
+.dest-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.dest-card:hover img {
+  transform: scale(1.12);
+}
+
+.dest-info {
+  padding: 1.8rem;
+  text-align: center;
+}
+
+.dest-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  color: #003580;
+}
+
+.dest-info p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff6b6b, #ffdd00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* Sections */
-section { padding: 4rem 1rem; text-align: center; }
-.services, .destinations, .contact { background: #f1f1f1; }
+.services, .destinations, .contact {
+  padding: 8rem 5% 6rem;
+}
 
-/* Services */
-.service-list { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-.service { background: white; padding: 1rem; border-radius: 5px; width: 220px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-.service h3 { margin-top: 0; }
-
-/* Destinations */
-.dest-list { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-.dest { background: white; padding: 0.5rem; border-radius: 5px; width: 220px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-.dest img { width: 100%; border-radius: 5px; }
-.dest h3 { margin: 0.5rem 0 0 0; }
-
-/* Contact */
-.contact p { font-size: 1.1rem; }
+h2 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 3.5rem;
+  background: linear-gradient(90deg, #00d4ff, #ffdd00, #ff6bcb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
 
 /* Footer */
-footer { background: #0077b6; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+footer {
+  background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+  color: white;
+  text-align: center;
+  padding: 3rem;
+  margin-top: 5rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.4rem 5%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+  .search-form-container {
+    padding: 2rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
