@@ -8,8 +8,9 @@
 body {
   font-family: 'Inter', sans-serif;
   background: #fdfaf7;
-  color: #2c2c2c;
+  color: #1e2a2f;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 /* Typography */
@@ -19,15 +20,21 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(4rem, 9vw, 8rem);
-  line-height: 0.95;
-  margin-bottom: 1.5rem;
+  font-size: clamp(4.8rem, 10vw, 9.6rem);
+  line-height: 0.92;
+  margin-bottom: 1.8rem;
+  background: linear-gradient(90deg, #6aa89f 0%, #d9b38c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
   font-size: clamp(2.8rem, 6vw, 4.5rem);
   margin-bottom: 3rem;
   text-align: center;
+  background: linear-gradient(90deg, #6aa89f, #d9b38c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Navbar */
@@ -35,18 +42,18 @@ h2 {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(253,250,247,0.95);
-  backdrop-filter: blur(16px);
+  background: rgba(253,250,247,0.94);
+  backdrop-filter: blur(20px);
   padding: 1.4rem 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(30,42,47,0.05);
 }
 
 .logo h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   background: linear-gradient(90deg, #6aa89f, #d9b38c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -59,7 +66,7 @@ h2 {
 }
 
 .nav-links a {
-  margin-left: 2.5rem;
+  margin-left: 2.8rem;
   color: #4a5b60;
   text-decoration: none;
   font-weight: 500;
@@ -73,7 +80,7 @@ h2 {
 /* Hero */
 .hero {
   height: 100vh;
-  min-height: 800px;
+  min-height: 880px;
   position: relative;
   display: flex;
   align-items: center;
@@ -83,14 +90,14 @@ h2 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('images/hero.jpg') center/cover no-repeat fixed;
-  filter: brightness(0.94) saturate(0.98);
+  background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=90') center/cover no-repeat fixed;
+  filter: brightness(0.82) saturate(0.92);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(253,250,247,0.25), rgba(253,250,247,0.75));
+  background: linear-gradient(to bottom, rgba(253,250,247,0.22) 0%, rgba(253,250,247,0.78) 60%, #fdfaf7 100%);
 }
 
 .hero-content {
@@ -98,31 +105,39 @@ h2 {
   z-index: 2;
   text-align: center;
   max-width: 1100px;
-  padding: 0 4rem;
+  padding: 0 5%;
 }
 
-.hero h1 {
-  background: linear-gradient(90deg, #6aa89f, #d9b38c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero-subtitle {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  color: #3a4f54;
+  max-width: 780px;
+  margin: 0 auto 4rem;
+  font-weight: 300;
 }
 
 /* Search */
 .search-container {
-  background: rgba(255,250,245,0.94);
-  backdrop-filter: blur(20px);
+  background: rgba(255,250,245,0.92);
+  backdrop-filter: blur(24px);
   border-radius: 24px;
-  padding: 3rem 4rem;
+  padding: 3.2rem 3.8rem;
+  box-shadow: 0 20px 60px rgba(30,42,47,0.08);
   max-width: 1180px;
-  margin: 3rem auto 0;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  margin: 0 auto;
   border: 1px solid rgba(233,229,220,0.5);
+  transition: all 0.5s ease;
+}
+
+.search-container:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 40px 100px rgba(106,168,159,0.18);
 }
 
 .trip-type {
   display: flex;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.4rem;
   justify-content: center;
 }
 
@@ -137,7 +152,7 @@ h2 {
 }
 
 .type-btn.active {
-  background: #6aa89f;
+  background: linear-gradient(90deg, #6aa89f, #5a958c);
   color: white;
 }
 
@@ -173,7 +188,7 @@ h2 {
 
 .search-btn {
   grid-column: 1 / -1;
-  background: linear-gradient(90deg, #6aa89f, #5a958c);
+  background: linear-gradient(90deg, #6aa89f, #d9b38c);
   color: white;
   border: none;
   padding: 1.4rem;
@@ -269,14 +284,13 @@ h2 {
 }
 
 .cta-btn {
-  background: #6aa89f;
+  background: linear-gradient(90deg, #6aa89f, #5a958c);
   color: white;
   border: none;
   padding: 1.4rem 4rem;
   font-size: 1.3rem;
   border-radius: 14px;
   cursor: pointer;
-  margin-top: 2rem;
   transition: all 0.4s;
 }
 
@@ -315,4 +329,5 @@ footer p {
   .hero { min-height: 720px; }
   .search-container { padding: 2rem; }
   .search-grid { grid-template-columns: 1fr; }
+  .dest-grid { grid-template-columns: 1fr; }
 }
