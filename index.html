@@ -12,24 +12,24 @@
 </head>
 <body>
 
-  <!-- Top bar -->
+  <!-- Top bar with menu, heart, sign in -->
   <header class="top-bar">
-    <button class="menu"><i class="fas fa-bars"></i></button>
+    <button class="menu-btn"><i class="fas fa-bars"></i></button>
     <div class="logo">JOURNEY</div>
     <div class="actions">
       <button class="heart"><i class="far fa-heart"></i></button>
-      <button class="user"><i class="far fa-user"></i></button>
+      <a href="#" class="sign-in">Sign in</a>
     </div>
   </header>
 
-  <!-- Hero search -->
-  <main class="hero">
+  <!-- Hero search – exact KAYAK layout -->
+  <section class="hero">
     <div class="hero-content">
       <h1>Start your travel planning here</h1>
       <p>Search Flights, Hotels & Rental Cars</p>
 
-      <div class="search-box">
-        <div class="tabs">
+      <div class="search-container">
+        <div class="search-tabs">
           <button class="tab active">Flights</button>
           <button class="tab">Stays</button>
           <button class="tab">Cars</button>
@@ -37,39 +37,41 @@
         </div>
 
         <form class="search-form">
-          <div class="row-1">
-            <select class="trip-type">
-              <option>Round-trip</option>
-              <option>One-way</option>
-              <option>Multi-city</option>
-            </select>
+          <div class="form-row">
+            <div class="input-group trip-type">
+              <select>
+                <option>Round-trip</option>
+                <option>One-way</option>
+                <option>Multi-city</option>
+              </select>
+            </div>
 
-            <div class="from-to">
-              <div class="field">
-                <input type="text" placeholder="Toronto (YTO)" value="Toronto (YTO)">
-              </div>
-              <button type="button" class="swap"><i class="fas fa-exchange-alt"></i></button>
-              <div class="field">
-                <input type="text" placeholder="To?">
-              </div>
+            <div class="input-group from">
+              <input type="text" placeholder="Toronto (YTO)" value="Toronto (YTO)">
+            </div>
+
+            <button type="button" class="swap-btn"><i class="fas fa-exchange-alt"></i></button>
+
+            <div class="input-group to">
+              <input type="text" placeholder="To?">
             </div>
           </div>
 
-          <div class="row-2">
-            <div class="field date">
+          <div class="form-row">
+            <div class="input-group date">
               <input type="date" placeholder="Departure">
             </div>
-            <div class="field date">
+            <div class="input-group date">
               <input type="date" placeholder="Return">
             </div>
-            <div class="field">
+            <div class="input-group travelers">
               <select>
                 <option>1 adult</option>
                 <option>2 adults</option>
                 <option>2 adults, 1 child</option>
               </select>
             </div>
-            <div class="field">
+            <div class="input-group class">
               <select>
                 <option>Economy</option>
                 <option>Premium</option>
@@ -83,9 +85,9 @@
         </form>
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- Popular Destinations -->
+  <!-- Popular Destinations grid -->
   <section class="popular">
     <div class="popular-grid">
       <div class="popular-item">
@@ -112,7 +114,15 @@
         <h3>Miami</h3>
         <p>CARS · FLIGHTS · HOTELS</p>
       </div>
-      <!-- Add more rows as needed -->
+      <div class="popular-item">
+        <h3>Orlando</h3>
+        <p>CARS · FLIGHTS · HOTELS</p>
+      </div>
+      <div class="popular-item">
+        <h3>Rome</h3>
+        <p>CARS · FLIGHTS · HOTELS</p>
+      </div>
+      <!-- Add more rows/columns to match screenshot -->
     </div>
   </section>
 
