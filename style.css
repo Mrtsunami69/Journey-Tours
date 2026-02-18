@@ -118,8 +118,7 @@ h1, h2, h3 {
   max-width: 1100px;
   padding: 0 4rem;
   width: 100%;
-  /* Balanced centering with breathing room from navbar */
-  margin-top: -80px; /* Main fix – pulls content slightly down for perfect balance */
+  margin-top: -80px; /* Main fix – balanced centering with breathing room from navbar */
 }
 
 .hero h1 {
