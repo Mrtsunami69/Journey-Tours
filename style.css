@@ -221,15 +221,6 @@ body {
   font-weight: 600;
 }
 
-.explore-more {
-  display: block;
-  text-align: center;
-  margin-top: 2rem;
-  color: #006ce4;
-  font-weight: 600;
-  text-decoration: none;
-}
-
 /* Tools */
 .tools {
   padding: 4rem 5% 6rem;
