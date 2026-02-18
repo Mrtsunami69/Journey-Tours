@@ -13,14 +13,14 @@ body {
   overflow-x: hidden;
 }
 
-/* Headings – Elegant serif */
+/* Headings – Elegant & premium */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   letter-spacing: -0.5px;
 }
 
-/* Navbar – Clean premium */
+/* Navbar – Clean, premium glass effect */
 .navbar {
   position: fixed;
   top: 0;
@@ -45,7 +45,6 @@ h1, h2, h3 {
 .logo {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .logo h1 {
@@ -79,7 +78,7 @@ h1, h2, h3 {
   color: #5c9f92;
 }
 
-/* Hero – Aspirational luxury */
+/* Hero – Aspirational & calming */
 .hero {
   position: relative;
   height: 100vh;
