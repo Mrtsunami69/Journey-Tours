@@ -121,6 +121,10 @@ h1, h2, h3 {
   margin-top: -80px; /* Balanced centering with breathing room from navbar */
 }
 
+.hero-content {
+  margin-top: -40px !important; /* or -30px / -50px – test and adjust */
+}
+
 /* Headline & subtext – prominent but not squished */
 .hero h1 {
   font-size: clamp(4.5rem, 11vw, 9rem);
@@ -406,3 +410,4 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
