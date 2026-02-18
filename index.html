@@ -6,8 +6,11 @@
   <meta name="description" content="JourneyWell Tours – Luxury travel, cheap flights, curated packages, and unforgettable destinations."/>
   <title>JourneyWell Tours – Luxury Travel & Unbeatable Journeys</title>
 
-  <!-- Google Fonts: elegant + modern -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon (optional – add your own later) -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,11 +23,12 @@
       <span>Tours</span>
     </div>
     <div class="nav-links">
-      <a href="#flights">Flights</a>
-      <a href="#hotels">Hotels</a>
-      <a href="#packages">Packages</a>
-      <a href="#destinations">Destinations</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="flights.html">Flights</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="packages.html">Packages</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
@@ -48,15 +52,15 @@
           <div class="form-grid">
             <div class="input-group">
               <label>From</label>
-              <input type="text" placeholder="City or airport" required>
+              <input type="text" placeholder="City or airport" required aria-required="true">
             </div>
             <div class="input-group">
               <label>To</label>
-              <input type="text" placeholder="City or airport" required>
+              <input type="text" placeholder="City or airport" required aria-required="true">
             </div>
             <div class="input-group">
               <label>Depart</label>
-              <input type="date" required>
+              <input type="date" required aria-required="true">
             </div>
             <div class="input-group">
               <label>Return</label>
@@ -64,11 +68,11 @@
             </div>
             <div class="input-group">
               <label>Travelers</label>
-              <select required>
-                <option>1 adult</option>
-                <option>2 adults</option>
-                <option>1 adult, 1 child</option>
-                <option>2 adults, 1 child</option>
+              <select required aria-required="true">
+                <option value="1">1 adult</option>
+                <option value="2">2 adults</option>
+                <option value="3">1 adult, 1 child</option>
+                <option value="4">2 adults, 1 child</option>
               </select>
             </div>
           </div>
@@ -83,15 +87,15 @@
   <section class="trust-bar">
     <div class="trust-items">
       <div class="trust-item">
-        <span class="icon">✓</span>
+        <span class="icon" aria-hidden="true">✓</span>
         <p>Best Price Guarantee</p>
       </div>
       <div class="trust-item">
-        <span class="icon">🔒</span>
+        <span class="icon" aria-hidden="true">🔒</span>
         <p>Secure Booking</p>
       </div>
       <div class="trust-item">
-        <span class="icon">24/7</span>
+        <span class="icon" aria-hidden="true">24/7</span>
         <p>Expert Support</p>
       </div>
     </div>
@@ -121,14 +125,14 @@
     <h2>Trending Escapes</h2>
     <div class="dest-grid">
       <div class="dest-card">
-        <img src="images/destination1.jpg" alt="Santorini Sunset">
+        <img src="images/destination1.jpg" alt="Santorini Sunset over Caldera">
         <div class="dest-info">
           <h3>Santorini, Greece</h3>
           <p>From $799</p>
         </div>
       </div>
       <div class="dest-card">
-        <img src="images/destination2.jpg" alt="Maldives Overwater">
+        <img src="images/destination2.jpg" alt="Maldives Overwater Villa">
         <div class="dest-info">
           <h3>Maldives</h3>
           <p>From $1,499</p>
@@ -167,6 +171,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>
