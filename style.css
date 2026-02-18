@@ -125,6 +125,13 @@ h1, h2, h3 {
   color: #2d2d2d;
   margin-bottom: 1.2rem;
   line-height: 0.95;
+  
+  .hero h1 {
+  /* ... existing rules */
+  background: linear-gradient(90deg, #5c9f92, #d4a373);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 }
 
 .hero h1 span {
@@ -441,4 +448,5 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
 
