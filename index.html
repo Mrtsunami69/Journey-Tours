@@ -3,445 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JourneyWell — Where Every Journey Feels Like Home</title>
+  <meta name="description" content="JourneyWell Tours – Safe, smooth, stress-free family vacations. Affordable packages & curated journeys."/>
+  <title>JourneyWell Tours – Where Families Travel Well</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --cream-50:  #fdfcf9;
-      --cream-100: #f9f5f0;
-      --cream-200: #f4efe7;
-      --teal-400:  #6aa89f;
-      --teal-500:  #5a958c;
-      --teal-600:  #4a8279;
-      --gold-400:   #d9b38c;
-      --gold-500:   #c9a376;
-      --text-dark:  #1e2a2f;
-      --text-light: #4a5b60;
-      --shadow-sm:  0 8px 32px rgba(30,42,47,0.06);
-      --shadow-md:  0 20px 60px rgba(30,42,47,0.12);
-      --radius-lg:  24px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--cream-50);
-      color: var(--text-dark);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      line-height: 1.1;
-    }
-
-    /* ─── Navbar ──────────────────────────────────────── */
-    .navbar {
-      position: fixed;
-      inset: 0 0 auto 0;
-      height: 80px;
-      background: rgba(253, 252, 249, 0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(233, 229, 220, 0.6);
-      z-index: 1000;
-      transition: all 0.4s ease;
-    }
-
-    .navbar.scrolled {
-      background: rgba(253, 252, 249, 0.98);
-      box-shadow: 0 4px 20px rgba(30,42,47,0.08);
-    }
-
-    .nav-container {
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 0 5%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 1.9rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      background: linear-gradient(90deg, var(--teal-500), var(--gold-400));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.8rem;
-    }
-
-    .nav-links a {
-      color: var(--text-light);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.05rem;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--teal-500);
-    }
-
-    /* ─── Hero ────────────────────────────────────────── */
-    .hero {
-      height: 100vh;
-      min-height: 880px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=90') center/cover no-repeat fixed;
-      filter: brightness(0.78) saturate(0.92);
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(253,252,249,0.18) 0%, rgba(253,252,249,0.72) 60%, #fdfcf9 100%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 1100px;
-      padding: 0 5%;
-    }
-
-    .hero h1 {
-      font-size: clamp(4.8rem, 10vw, 9.6rem);
-      font-weight: 700;
-      line-height: 0.92;
-      margin-bottom: 1.8rem;
-      background: linear-gradient(90deg, #6aa89f 0%, #d9b38c 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 12px 40px rgba(30,42,47,0.18);
-    }
-
-    .hero p {
-      font-size: clamp(1.5rem, 3.5vw, 2rem);
-      color: #3a4f54;
-      max-width: 780px;
-      margin: 0 auto 4rem;
-      font-weight: 300;
-    }
-
-    /* Search Form ────────────────────────────────────── */
-    .search-form-container {
-      background: rgba(255,250,245,0.92);
-      backdrop-filter: blur(24px);
-      border-radius: var(--radius-lg);
-      padding: 3.2rem 3.8rem;
-      box-shadow: var(--shadow-md);
-      max-width: 1180px;
-      margin: 0 auto;
-      border: 1px solid rgba(233,229,220,0.6);
-      transition: all 0.5s ease;
-    }
-
-    .search-form-container:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 40px 100px rgba(106,168,159,0.18);
-    }
-
-    .trip-type {
-      display: flex;
-      gap: 2.2rem;
-      margin-bottom: 2.4rem;
-      font-weight: 600;
-      color: #4a5b60;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.8rem;
-    }
-
-    .input-group {
-      position: relative;
-    }
-
-    .input-group label {
-      position: absolute;
-      top: -11px;
-      left: 20px;
-      background: #fffaf5;
-      padding: 0 10px;
-      font-size: 0.92rem;
-      color: #6b7c80;
-      pointer-events: none;
-    }
-
-    .input-group input,
-    .input-group select {
-      width: 100%;
-      padding: 1.35rem 1.5rem;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      font-size: 1.1rem;
-      background: #fffaf5;
-      transition: all 0.35s ease;
-    }
-
-    .input-group input:focus,
-    .input-group select:focus {
-      border-color: var(--teal-500);
-      box-shadow: 0 0 0 5px rgba(106,168,159,0.12);
-      outline: none;
-    }
-
-    .search-btn {
-      grid-column: 1 / -1;
-      background: linear-gradient(90deg, var(--teal-500), var(--teal-600));
-      color: white;
-      border: none;
-      padding: 1.4rem 5rem;
-      font-size: 1.35rem;
-      font-weight: 700;
-      border-radius: 16px;
-      cursor: pointer;
-      box-shadow: 0 12px 35px rgba(106,168,159,0.28);
-      transition: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    .search-btn:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 28px 70px rgba(106,168,159,0.42);
-    }
-
-    /* ─── Sections ────────────────────────────────────── */
-    section {
-      padding: 10rem 5% 8rem;
-    }
-
-    h2 {
-      font-size: clamp(3.2rem, 7vw, 5.2rem);
-      margin-bottom: 4rem;
-      text-align: center;
-      background: linear-gradient(90deg, var(--teal-500), var(--gold-400));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .dest-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 2.4rem;
-      max-width: 1440px;
-      margin: 0 auto;
-    }
-
-    .dest-card {
-      background: white;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-      border: 1px solid rgba(233,229,220,0.4);
-    }
-
-    .dest-card:hover {
-      transform: translateY(-16px) scale(1.02);
-      box-shadow: var(--shadow-md);
-      border-color: rgba(106,168,159,0.3);
-    }
-
-    .dest-card img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      transition: transform 0.7s ease;
-    }
-
-    .dest-card:hover img {
-      transform: scale(1.09);
-    }
-
-    .dest-info {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .dest-info h3 {
-      font-size: 1.7rem;
-      margin-bottom: 0.8rem;
-      color: var(--text-dark);
-    }
-
-    .dest-info p {
-      color: var(--text-light);
-      font-size: 1.15rem;
-    }
-
-    .price {
-      display: block;
-      margin-top: 1rem;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--gold-500);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--text-dark);
-      color: #d1d9e0;
-      padding: 5rem 5% 3rem;
-      text-align: center;
-    }
-
-    .footer-links a {
-      color: #a0aec0;
-      margin: 0 1.2rem;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .footer-links a:hover {
-      color: #fff;
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .hero h1 { font-size: 7rem; }
-    }
-
-    @media (max-width: 768px) {
-      .navbar { padding: 1rem 5%; }
-      .nav-links { gap: 1.5rem; font-size: 0.95rem; }
-      .hero { min-height: 720px; }
-      .hero-content { padding: 0 1.5rem; }
-      .search-form-container { padding: 2.2rem; }
-      .form-grid { grid-template-columns: 1fr; }
-      section { padding: 7rem 5% 5rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Navbar -->
   <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo">JourneyWell</div>
-      <div class="nav-links">
-        <a href="#">Flights</a>
-        <a href="#">Hotels</a>
-        <a href="#">Packages</a>
-        <a href="#">Destinations</a>
-        <a href="#">Contact</a>
-      </div>
+    <div class="logo">
+      <h1>JourneyWell</h1>
+      <span>Tours</span>
+    </div>
+    <div class="nav-links">
+      <a href="#flights">Flights</a>
+      <a href="#hotels">Hotels</a>
+      <a href="#packages">Packages</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Travel Well,<br>Live Fully</h1>
-      <p>Curated journeys crafted with care — where every moment feels effortless and every memory lasts forever.</p>
+      <h1>Safe. Smooth.<br>Family Journeys</h1>
+      <p>We plan every detail so your everyday family can just enjoy the adventure — without the stress.</p>
 
-      <div class="search-form-container">
+      <div class="search-container">
         <div class="trip-type">
-          <label><input type="radio" name="trip" value="round" checked> Round-trip</label>
-          <label><input type="radio" name="trip" value="one"> One-way</label>
-          <label><input type="radio" name="trip" value="multi"> Multi-city</label>
+          <button class="type-btn active">Round-trip</button>
+          <button class="type-btn">One-way</button>
         </div>
 
-        <div class="form-grid">
-          <div class="input-group">
+        <div class="search-grid">
+          <div class="search-field">
             <label>From</label>
             <input type="text" placeholder="City or airport">
           </div>
-          <div class="input-group">
+          <div class="search-field">
             <label>To</label>
             <input type="text" placeholder="City or airport">
           </div>
-          <div class="input-group">
+          <div class="search-field">
             <label>Depart</label>
             <input type="date">
           </div>
-          <div class="input-group">
+          <div class="search-field">
             <label>Return</label>
             <input type="date">
           </div>
-          <div class="input-group">
-            <label>Travelers</label>
+          <div class="search-field">
+            <label>Family</label>
             <select>
-              <option>1 adult</option>
               <option>2 adults</option>
-              <option>1 adult, 1 child</option>
+              <option>2 adults, 1 child</option>
               <option>2 adults, 2 children</option>
             </select>
           </div>
         </div>
 
-        <button class="search-btn">Search Journeys</button>
+        <button class="search-btn">Find Family Deals</button>
       </div>
     </div>
   </section>
 
+  <!-- Trust & Value -->
+  <section class="trust">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <i class="fas fa-shield-alt"></i>
+        <p>Safe & Kid-Friendly</p>
+      </div>
+      <div class="trust-item">
+        <i class="fas fa-dollar-sign"></i>
+        <p>Affordable Family Bundles</p>
+      </div>
+      <div class="trust-item">
+        <i class="fas fa-clock"></i>
+        <p>Stress-Free Planning</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations -->
   <section class="destinations">
-    <h2>Inspired Destinations</h2>
+    <h2>Family-Friendly Getaways</h2>
     <div class="dest-grid">
       <div class="dest-card">
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Santorini cliffs at sunset">
-        <div class="dest-info">
-          <h3>Santorini, Greece</h3>
-          <p>Timeless white & blue romance</p>
-          <div class="price">from $1,290</div>
-        </div>
+        <img src="images/destination1.jpg" alt="Family beach vacation">
+        <h3>Beach Resorts</h3>
+        <p>Safe shores & kids clubs • From $799</p>
       </div>
       <div class="dest-card">
-        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800" alt="Maldives overwater villa">
-        <div class="dest-info">
-          <h3>Maldives</h3>
-          <p>Overwater serenity & turquoise dreams</p>
-          <div class="price">from $2,490</div>
-        </div>
+        <img src="images/destination2.jpg" alt="Theme park family trip">
+        <h3>Theme Parks</h3>
+        <p>Magic for kids • From $599</p>
       </div>
       <div class="dest-card">
-        <img src="https://images.unsplash.com/photo-1540979388789-7cee28a1cdc9?w=800" alt="Kyoto cherry blossoms">
-        <div class="dest-info">
-          <h3>Kyoto, Japan</h3>
-          <p>Sakura serenity & ancient temples</p>
-          <div class="price">from $1,890</div>
-        </div>
+        <img src="images/destination3.jpg" alt="Nature family tour">
+        <h3>Nature & Wildlife</h3>
+        <p>Safe adventures • From $699</p>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready for Your Family Adventure?</h2>
+    <p>Contact us for personalized, budget-friendly packages.</p>
+    <div class="contact-info">
+      <p>Email: journeys@journeywelltours.com</p>
+      <p>Phone: +1 (905) 555-0123</p>
+    </div>
+    <button class="cta-btn">Get in Touch</button>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <p>© 2026 JourneyWell — Crafted with care</p>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Contact</a>
-      </div>
+    <p>© 2026 JourneyWell Tours – Made for Everyday Families</p>
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
   </footer>
 
