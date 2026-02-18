@@ -6,20 +6,20 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #1a1a1a;
-  background: #f8f9fa;
-  line-height: 1.6;
+  background: #fff;
+  line-height: 1.5;
 }
 
-/* Navbar */
-.navbar {
+/* Top Nav */
+.top-nav {
   position: fixed;
   top: 0;
   width: 100%;
   background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  padding: 1rem 5%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 0.8rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,27 +27,35 @@ body {
 }
 
 .logo h1 {
-  font-size: 1.8rem;
-  color: #ff5a5f; /* KAYAK red */
+  font-size: 1.7rem;
+  color: #ff5a5f;
   font-weight: 700;
 }
 
-.nav-links a {
-  margin-left: 2.5rem;
-  color: #333;
-  text-decoration: none;
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sign-in {
+  color: #006ce4;
   font-weight: 500;
-  transition: color 0.2s;
+  text-decoration: none;
 }
 
-.nav-links a:hover {
-  color: #ff5a5f;
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
 }
 
-/* Hero – KAYAK-style big search */
+/* Hero – KAYAK-style */
 .hero {
   height: 100vh;
-  min-height: 720px;
+  min-height: 680px;
   position: relative;
   display: flex;
   align-items: center;
@@ -60,41 +68,32 @@ body {
   position: absolute;
   inset: 0;
   background: url('images/hero.jpg') center/cover no-repeat;
-  filter: brightness(0.65);
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
+  filter: brightness(0.6);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 1100px;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 
 .hero h1 {
-  font-size: clamp(3.5rem, 8vw, 5.5rem);
-  margin-bottom: 1.5rem;
+  font-size: clamp(2.8rem, 7vw, 4.5rem);
   font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 .hero p {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
-  margin-bottom: 3rem;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  margin-bottom: 2.5rem;
 }
 
-/* Search Container – KAYAK style */
+/* Search Container */
 .search-container {
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
   max-width: 980px;
   margin: 0 auto;
   overflow: hidden;
@@ -103,14 +102,14 @@ body {
 .search-tabs {
   display: flex;
   background: #f1f3f5;
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1.2rem;
 }
 
 .tab {
-  padding: 0.8rem 1.8rem;
+  padding: 0.7rem 1.6rem;
   background: transparent;
   border: none;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #495057;
   cursor: pointer;
@@ -119,45 +118,45 @@ body {
 
 .tab.active {
   background: white;
-  border-radius: 10px;
+  border-radius: 8px;
   color: #ff5a5f;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .search-form {
-  padding: 2rem 2.5rem;
+  padding: 1.8rem 2.2rem;
 }
 
 .form-row {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
   flex-wrap: wrap;
 }
 
 .input-group {
   flex: 1;
-  min-width: 220px;
+  min-width: 180px;
   position: relative;
 }
 
 .input-group label {
   position: absolute;
   top: -8px;
-  left: 16px;
+  left: 14px;
   background: white;
-  padding: 0 8px;
-  font-size: 0.85rem;
+  padding: 0 6px;
+  font-size: 0.8rem;
   color: #6c757d;
 }
 
 .input-group input,
 .input-group select {
   width: 100%;
-  padding: 1.1rem 1.25rem;
+  padding: 0.9rem 1rem;
   border: 1px solid #ced4da;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .search-btn {
@@ -165,8 +164,8 @@ body {
   background: #ff5a5f;
   color: white;
   border: none;
-  padding: 1.2rem;
-  font-size: 1.25rem;
+  padding: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
@@ -180,7 +179,7 @@ body {
 /* Trust Bar */
 .trust-bar {
   background: #fff;
-  padding: 2.5rem 5%;
+  padding: 2rem 5%;
   text-align: center;
   border-bottom: 1px solid #e9ecef;
 }
@@ -188,27 +187,27 @@ body {
 .trust-items {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 3rem;
   flex-wrap: wrap;
 }
 
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  font-size: 1.1rem;
+  gap: 0.6rem;
+  font-size: 1rem;
   color: #495057;
 }
 
 /* Destinations */
 .destinations {
-  padding: 5rem 5% 6rem;
-  background: #f8f9fa;
+  padding: 4rem 5% 6rem;
+  background: #fff;
 }
 
 .dest-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   max-width: 1400px;
   margin: 0 auto;
@@ -228,18 +227,18 @@ body {
 
 .dest-card img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
 }
 
 .dest-info {
-  padding: 1.5rem;
+  padding: 1.2rem;
   text-align: center;
 }
 
 .dest-info h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .dest-info p {
@@ -268,9 +267,10 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
   .navbar { padding: 1rem 5%; }
-  .nav-links { gap: 1.2rem; font-size: 0.95rem; }
-  .hero h1 { font-size: 3rem; }
+  .nav-links { display: none; }
+  .menu-btn { display: block; }
+  .hero h1 { font-size: 2.8rem; }
   .search-container { margin: 1rem; }
   .form-row { flex-direction: column; }
-  .trust-items { gap: 2rem; }
+  .trust-items { gap: 1.5rem; }
 }
