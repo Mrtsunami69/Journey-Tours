@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="JourneyWell Tours – Search flights, hotels, rental cars, packages & deals. Safe, affordable family travel."/>
+  <meta name="description" content="Search flights, hotels, rental cars & vacation packages with JourneyWell Tours – best prices & easy planning."/>
   <title>JourneyWell Tours – Search Flights, Hotels & More</title>
 
   <!-- Google Fonts -->
@@ -28,23 +28,23 @@
     </div>
   </header>
 
-  <!-- Hero Search -->
+  <!-- Hero Search – very KAYAK-like -->
   <section class="hero">
     <div class="hero-inner">
-      <h1>Search Flights, Hotels, Cars & Packages</h1>
-      <p>Compare deals from hundreds of sites – find the best for your family.</p>
+      <h1>Start your travel planning here</h1>
+      <p>Search Flights, Hotels & Rental Cars</p>
 
       <div class="search-box">
         <div class="search-tabs">
-          <button class="tab active"><i class="fas fa-plane"></i> Flights</button>
-          <button class="tab"><i class="fas fa-bed"></i> Hotels</button>
-          <button class="tab"><i class="fas fa-car"></i> Cars</button>
-          <button class="tab"><i class="fas fa-suitcase"></i> Packages</button>
+          <button class="tab active">Flights</button>
+          <button class="tab">Stays</button>
+          <button class="tab">Cars</button>
+          <button class="tab">Packages</button>
         </div>
 
         <form class="search-form">
           <div class="form-row">
-            <div class="input-group trip">
+            <div class="input-group trip-type">
               <select>
                 <option>Round-trip</option>
                 <option>One-way</option>
@@ -53,8 +53,7 @@
             </div>
 
             <div class="input-group">
-              <label>From</label>
-              <input type="text" placeholder="City or airport" required>
+              <input type="text" placeholder="From (city or airport)" required>
             </div>
 
             <div class="input-group arrow">
@@ -62,24 +61,20 @@
             </div>
 
             <div class="input-group">
-              <label>To</label>
-              <input type="text" placeholder="City or airport" required>
+              <input type="text" placeholder="To (city or airport)" required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="input-group date">
-              <label>Depart</label>
-              <input type="date" required>
+              <input type="date" placeholder="Departure" required>
             </div>
 
             <div class="input-group date">
-              <label>Return</label>
-              <input type="date">
+              <input type="date" placeholder="Return">
             </div>
 
             <div class="input-group">
-              <label>Travelers</label>
               <select>
                 <option>1 adult</option>
                 <option>2 adults</option>
@@ -88,11 +83,12 @@
               </select>
             </div>
 
-            <div class="input-group class">
+            <div class="input-group">
               <select>
                 <option>Economy</option>
-                <option>Premium</option>
+                <option>Premium Economy</option>
                 <option>Business</option>
+                <option>First</option>
               </select>
             </div>
           </div>
@@ -105,43 +101,32 @@
     </div>
   </section>
 
-  <!-- Deals Grid -->
-  <section class="deals">
-    <h2>Travel deals under $226</h2>
-    <a href="#" class="explore-more">Explore more ></a>
-    <div class="deals-grid">
-      <div class="deal-card">
-        <img src="images/halifax.jpg" alt="Halifax">
-        <div class="deal-info">
-          <h3>Halifax</h3>
-          <p>2h 40m non-stop</p>
-          <p class="price">from $93</p>
+  <!-- Popular Destinations -->
+  <section class="popular">
+    <h2>Popular Destinations</h2>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <img src="images/destination1.jpg" alt="Las Vegas">
+        <div class="dest-info">
+          <h3>Las Vegas</h3>
+          <p>CARS · FLIGHTS · HOTELS</p>
         </div>
       </div>
-      <div class="deal-card">
-        <img src="images/orlando.jpg" alt="Orlando">
-        <div class="deal-info">
-          <h3>Orlando</h3>
-          <p>3h 10m non-stop</p>
-          <p class="price">from $128</p>
+      <div class="dest-card">
+        <img src="images/destination2.jpg" alt="New York">
+        <div class="dest-info">
+          <h3>New York</h3>
+          <p>CARS · FLIGHTS · HOTELS</p>
         </div>
       </div>
-      <div class="deal-card">
-        <img src="images/fort-myers.jpg" alt="Fort Myers">
-        <div class="deal-info">
-          <h3>Fort Myers</h3>
-          <p>3h 20m non-stop</p>
-          <p class="price">from $139</p>
+      <div class="dest-card">
+        <img src="images/destination3.jpg" alt="London">
+        <div class="dest-info">
+          <h3>London</h3>
+          <p>CARS · FLIGHTS · HOTELS</p>
         </div>
       </div>
-      <div class="deal-card">
-        <img src="images/fort-lauderdale.jpg" alt="Fort Lauderdale">
-        <div class="deal-info">
-          <h3>Fort Lauderdale</h3>
-          <p>3h 28m non-stop</p>
-          <p class="price">from $149</p>
-        </div>
-      </div>
+      <!-- Add more as needed -->
     </div>
   </section>
 
@@ -155,53 +140,20 @@
         <p>Get travel questions answered</p>
       </div>
       <div class="tool-card">
-        <i class="fas fa-calendar-check"></i>
+        <i class="fas fa-clock"></i>
         <h3>Best Time to Travel</h3>
         <p>Know when to save</p>
       </div>
       <div class="tool-card">
-        <i class="fas fa-globe"></i>
+        <i class="fas fa-map"></i>
         <h3>Explore</h3>
         <p>See destinations on your budget</p>
       </div>
       <div class="tool-card">
-        <i class="fas fa-map"></i>
+        <i class="fas fa-suitcase"></i>
         <h3>Trips</h3>
         <p>Keep all your plans in one place</p>
       </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq">
-    <h2>Frequently asked questions</h2>
-    <div class="faq-list">
-      <details>
-        <summary>How do I find travel deals on JourneyWell?</summary>
-        <p>Use the search tool to compare flights, hotels, cars, and packages from hundreds of sites in seconds.</p>
-      </details>
-      <details>
-        <summary>What makes JourneyWell a great travel app?</summary>
-        <p>Fast searches, price alerts, easy bookings, and tools like Best Time to Travel and Trips for smart planning.</p>
-      </details>
-      <details>
-        <summary>How can I manage my travel bookings?</summary>
-        <p>Use Trips to keep all your flights, hotels, and plans in one place – accessible anywhere.</p>
-      </details>
-      <details>
-        <summary>What are Price Alerts?</summary>
-        <p>Get notifications when prices drop for your chosen routes – never miss a deal.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- App Promo -->
-  <section class="app-promo">
-    <h2>Get the JourneyWell App</h2>
-    <p>Plan, book, and manage your trip on the go.</p>
-    <div class="app-buttons">
-      <a href="#" class="app-button"><i class="fab fa-apple"></i> App Store</a>
-      <a href="#" class="app-button"><i class="fab fa-google-play"></i> Google Play</a>
     </div>
   </section>
 
@@ -214,16 +166,13 @@
         <a href="#">Careers</a>
         <a href="#">Mobile</a>
         <a href="#">Blog</a>
-        <a href="#">How we work</a>
       </div>
       <div class="footer-column">
         <h4>Contact</h4>
         <a href="#">Help/FAQ</a>
         <a href="#">Press</a>
         <a href="#">Affiliates</a>
-        <a href="#">Hotel owners</a>
         <a href="#">Partners</a>
-        <a href="#">Advertise with us</a>
       </div>
       <div class="footer-column">
         <h4>More</h4>
@@ -240,6 +189,11 @@
         <a href="#">Privacy</a>
         <a href="#">Terms & Conditions</a>
         <a href="#">Ad Choices</a>
+      </div>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </footer>
