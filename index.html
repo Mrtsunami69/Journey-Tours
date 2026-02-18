@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelCo - Explore the World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>TravelCo</h1>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('images/hero.jpg')">
+    <h2>Explore the World with TravelCo</h2>
+    <p>Your dream vacation starts here</p>
+    <a href="#contact" class="btn">Book Now</a>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service">
+        <h3>Flight Booking</h3>
+        <p>Book flights at the best prices.</p>
+      </div>
+      <div class="service">
+        <h3>Hotel Booking</h3>
+        <p>Comfortable stays worldwide.</p>
+      </div>
+      <div class="service">
+        <h3>Tour Packages</h3>
+        <p>Curated tours for every traveler.</p>
+      </div>
+    </div>
+  </section>
+  <section class="flight-search">
+  <div class="search-card">
+    <h2>Plan Your Perfect Trip</h2>
+    <p>Find flights, explore destinations, and start your adventure</p>
+
+    <form>
+      <div class="input-row">
+        <div class="input-group">
+          <label>From</label>
+          <input type="text" placeholder="City or Airport">
+        </div>
+        <div class="input-group">
+          <label>To</label>
+          <input type="text" placeholder="City or Airport">
+        </div>
+      </div>
+
+      <div class="input-row">
+        <div class="input-group">
+          <label>Depart</label>
+          <input type="date">
+        </div>
+        <div class="input-group">
+          <label>Return</label>
+          <input type="date">
+        </div>
+      </div>
+
+      <div class="input-row">
+        <div class="input-group">
+          <label>Passengers</label>
+          <select>
+            <option>1 Adult</option>
+            <option>2 Adults</option>
+            <option>3 Adults</option>
+            <option>4 Adults</option>
+          </select>
+        </div>
+        <div class="input-group full-width">
+          <button type="submit" class="btn-search">Search Flights</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Destinations Section -->
+  <section id="destinations" class="destinations">
+    <h2>Top Destinations</h2>
+    <div class="dest-list">
+      <div class="dest">
+        <img src="images/destination1.jpg" alt="Paris">
+        <h3>Paris</h3>
+      </div>
+      <div class="dest">
+        <img src="images/destination2.jpg" alt="Bali">
+        <h3>Bali</h3>
+      </div>
+      <div class="dest">
+        <img src="images/destination3.jpg" alt="New York">
+        <h3>New York</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@travelco.com | Phone: +1 234 567 890</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 TravelCo. All rights reserved.
+  </footer>
+
+</body>
+</html>
