@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Search flights, hotels, rental cars & vacation packages with JourneyWell Tours – best prices & easy planning."/>
+  <meta name="description" content="Search flights, hotels, rental cars and vacation packages with JourneyWell Tours – compare deals from hundreds of sites."/>
   <title>JourneyWell Tours – Search Flights, Hotels & More</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -11,102 +11,148 @@
 </head>
 <body>
 
-  <!-- Navbar (KAYAK-style: simple, white, logo left, links right) -->
-  <nav class="navbar">
+  <!-- Top Navbar (KAYAK-style: simple, logo left, links + sign in) -->
+  <nav class="top-nav">
     <div class="logo">
       <h1>JourneyWell</h1>
     </div>
-    <div class="nav-links">
-      <a href="#flights">Flights</a>
-      <a href="#hotels">Hotels</a>
-      <a href="#cars">Rental Cars</a>
-      <a href="#packages">Packages</a>
-      <a href="#destinations">Destinations</a>
+    <div class="nav-right">
+      <a href="#" class="sign-in">Sign in</a>
+      <button class="menu-btn"><i class="fas fa-bars"></i></button>
     </div>
   </nav>
 
-  <!-- Hero – KAYAK-style huge search -->
+  <!-- Main Search Hero (very close to KAYAK) -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-
     <div class="hero-content">
-      <h1>Search Flights, Hotels & Rental Cars</h1>
-      <p>Find the best deals for your next trip — fast & easy.</p>
+      <h1>Compare flight deals from 100s of sites.</h1>
 
-      <div class="search-container">
-        <div class="search-tabs">
-          <button class="tab active">Flights</button>
-          <button class="tab">Hotels</button>
-          <button class="tab">Cars</button>
-          <button class="tab">Packages</button>
-        </div>
-
-        <form class="search-form">
-          <div class="form-row">
-            <div class="input-group">
-              <label>From</label>
-              <input type="text" placeholder="City or airport" required>
-            </div>
-            <div class="input-group">
-              <label>To</label>
-              <input type="text" placeholder="City or airport" required>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="input-group">
-              <label>Depart</label>
-              <input type="date" required>
-            </div>
-            <div class="input-group">
-              <label>Return</label>
-              <input type="date">
-            </div>
-            <div class="input-group">
-              <label>Travelers</label>
-              <select>
-                <option>1 adult</option>
-                <option>2 adults</option>
-                <option>2 adults, 1 child</option>
-                <option>Family</option>
-              </select>
-            </div>
-          </div>
-
-          <button type="submit" class="search-btn">Search</button>
-        </form>
+      <div class="search-tabs">
+        <button class="tab active">Flights</button>
+        <button class="tab">Stays</button>
+        <button class="tab">Cars</button>
+        <button class="tab">Packages</button>
       </div>
+
+      <form class="main-search">
+        <div class="search-row">
+          <div class="input-group trip-type">
+            <select>
+              <option>Round-trip</option>
+              <option>One-way</option>
+              <option>Multi-city</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>From</label>
+            <input type="text" placeholder="Toronto (YTO)" value="Toronto (YTO)">
+          </div>
+
+          <div class="input-group arrow">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+
+          <div class="input-group">
+            <label>To</label>
+            <input type="text" placeholder="To?">
+          </div>
+
+          <div class="input-group date">
+            <label>Departure</label>
+            <input type="date">
+          </div>
+
+          <div class="input-group date">
+            <label>Return</label>
+            <input type="date">
+          </div>
+
+          <div class="input-group">
+            <label>Travelers</label>
+            <select>
+              <option>1 adult</option>
+              <option>2 adults</option>
+              <option>1 adult, 1 child</option>
+            </select>
+          </div>
+
+          <div class="input-group economy">
+            <select>
+              <option>Economy</option>
+              <option>Premium</option>
+              <option>Business</option>
+              <option>First</option>
+            </select>
+          </div>
+
+          <button type="submit" class="search-btn">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </form>
     </div>
   </section>
 
-  <!-- Trust signals (like KAYAK) -->
-  <section class="trust-bar">
-    <div class="trust-items">
-      <div><i class="fas fa-shield-alt"></i> Secure & Trusted</div>
-      <div><i class="fas fa-dollar-sign"></i> Best Price Guarantee</div>
-      <div><i class="fas fa-headset"></i> 24/7 Support</div>
-    </div>
-  </section>
-
-  <!-- Popular Destinations -->
-  <section class="destinations">
-    <h2>Popular Destinations</h2>
+  <!-- Popular Destinations (KAYAK-style grid with prices) -->
+  <section class="popular">
+    <h2>Travel deals under $226</h2>
     <div class="dest-grid">
       <div class="dest-card">
-        <img src="images/destination1.jpg" alt="Paris">
-        <h3>Paris, France</h3>
-        <p>From $699 round-trip</p>
+        <img src="images/destination1.jpg" alt="Halifax">
+        <div class="dest-info">
+          <h3>Halifax</h3>
+          <p>2h 40m non-stop</p>
+          <p class="price">from $93</p>
+        </div>
       </div>
       <div class="dest-card">
-        <img src="images/destination2.jpg" alt="Bali">
-        <h3>Bali, Indonesia</h3>
-        <p>From $899 round-trip</p>
+        <img src="images/destination2.jpg" alt="Orlando">
+        <div class="dest-info">
+          <h3>Orlando</h3>
+          <p>3h 10m non-stop</p>
+          <p class="price">from $128</p>
+        </div>
       </div>
       <div class="dest-card">
-        <img src="images/destination3.jpg" alt="New York">
-        <h3>New York, USA</h3>
-        <p>From $499 round-trip</p>
+        <img src="images/destination3.jpg" alt="Fort Myers">
+        <div class="dest-info">
+          <h3>Fort Myers</h3>
+          <p>3h 20m non-stop</p>
+          <p class="price">from $139</p>
+        </div>
+      </div>
+      <div class="dest-card">
+        <img src="images/destination4.jpg" alt="Fort Lauderdale">
+        <div class="dest-info">
+          <h3>Fort Lauderdale</h3>
+          <p>3h 28m non-stop</p>
+          <p class="price">from $149</p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="explore-more">Explore more deals →</a>
+  </section>
+
+  <!-- For Travel Pros / Tools Section -->
+  <section class="tools-section">
+    <h2>For travel pros</h2>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <h3>JourneyWell.ai (BETA)</h3>
+        <p>Get travel questions answered</p>
+      </div>
+      <div class="tool-card">
+        <h3>Best Time to Travel</h3>
+        <p>Know when to save</p>
+      </div>
+      <div class="tool-card">
+        <h3>Explore</h3>
+        <p>See destinations on your budget</p>
+      </div>
+      <div class="tool-card">
+        <h3>Trips</h3>
+        <p>Keep all your plans in one place</p>
       </div>
     </div>
   </section>
@@ -114,12 +160,38 @@
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <p>© 2026 JourneyWell Tours. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
+      <div class="footer-top">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Careers</a>
+          <a href="#">Mobile</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <a href="#">Help/FAQ</a>
+          <a href="#">Press</a>
+          <a href="#">Affiliates</a>
+          <a href="#">Partners with us</a>
+        </div>
+        <div class="footer-column">
+          <h4>More</h4>
+          <a href="#">Airline fees</a>
+          <a href="#">Low fare tips</a>
+          <a href="#">Badges & Certificates</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 JourneyWell Tours. Privacy • Terms & Conditions • Ad Choices</p>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
     </div>
   </footer>
