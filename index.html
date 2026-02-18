@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <!-- Navbar with Hamburger -->
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
       <h1>JourneyWell</h1>
@@ -32,13 +32,13 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero with golden sunset glow -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Safe. Smooth.<br>Family Journeys</h1>
-      <p>We plan every detail so your everyday family can enjoy the adventure — stress-free.</p>
+      <p>We plan every detail so your everyday family can enjoy the adventure — without the stress.</p>
 
       <div class="search-container">
         <div class="trip-type">
@@ -102,21 +102,27 @@
     <div class="dest-grid">
       <div class="dest-card">
         <img src="images/destination1.jpg" alt="Family beach vacation">
-        <h3>Beach Resorts</h3>
-        <p>Safe shores & kids clubs</p>
-        <p class="price">From $799</p>
+        <div class="dest-info">
+          <h3>Beach Resorts</h3>
+          <p>Safe shores & kids clubs</p>
+          <p class="price">From $799</p>
+        </div>
       </div>
       <div class="dest-card">
         <img src="images/destination2.jpg" alt="Theme park family trip">
-        <h3>Theme Parks</h3>
-        <p>Magic for kids</p>
-        <p class="price">From $599</p>
+        <div class="dest-info">
+          <h3>Theme Parks</h3>
+          <p>Magic for kids</p>
+          <p class="price">From $599</p>
+        </div>
       </div>
       <div class="dest-card">
         <img src="images/destination3.jpg" alt="Nature family tour">
-        <h3>Nature & Wildlife</h3>
-        <p>Safe adventures</p>
-        <p class="price">From $699</p>
+        <div class="dest-info">
+          <h3>Nature & Wildlife</h3>
+          <p>Safe adventures</p>
+          <p class="price">From $699</p>
+        </div>
       </div>
     </div>
   </section>
@@ -140,6 +146,13 @@
       <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
   </footer>
+
+  <!-- Hamburger Menu Script -->
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
