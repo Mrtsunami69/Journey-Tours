@@ -3,51 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="JourneyWell Tours – Safe, smooth, stress-free family vacations for everyday middle-income families. Affordable bundles, seasonal deals, and curated packages."/>
-  <meta name="keywords" content="family vacations, affordable travel, stress-free trips, family packages, holiday deals"/>
-  <title>JourneyWell Tours – Safe & Smooth Family Vacations</title>
+  <meta name="description" content="Search flights, hotels, rental cars & vacation packages with JourneyWell Tours – best prices & easy planning."/>
+  <title>JourneyWell Tours – Search Flights, Hotels & More</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Favicon – replace with your logo -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Navbar (KAYAK-style: simple, white, logo left, links right) -->
   <nav class="navbar">
     <div class="logo">
       <h1>JourneyWell</h1>
-      <span>Tours</span>
     </div>
     <div class="nav-links">
       <a href="#flights">Flights</a>
       <a href="#hotels">Hotels</a>
+      <a href="#cars">Rental Cars</a>
       <a href="#packages">Packages</a>
       <a href="#destinations">Destinations</a>
-      <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero – Emotional, family-focused -->
+  <!-- Hero – KAYAK-style huge search -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
+
     <div class="hero-content">
-      <h1>Safe. Smooth.<br>Family Journeys</h1>
-      <p>"Journey" for meaningful experiences. "Well" for comfort and care — perfect for everyday families.</p>
+      <h1>Search Flights, Hotels & Rental Cars</h1>
+      <p>Find the best deals for your next trip — fast & easy.</p>
 
-      <div class="search-form-container">
+      <div class="search-container">
+        <div class="search-tabs">
+          <button class="tab active">Flights</button>
+          <button class="tab">Hotels</button>
+          <button class="tab">Cars</button>
+          <button class="tab">Packages</button>
+        </div>
+
         <form class="search-form">
-          <div class="trip-type">
-            <label><input type="radio" name="trip" value="roundtrip" checked> Round-trip</label>
-            <label><input type="radio" name="trip" value="oneway"> One-way</label>
-          </div>
-
-          <div class="form-grid">
+          <div class="form-row">
             <div class="input-group">
               <label>From</label>
               <input type="text" placeholder="City or airport" required>
@@ -56,6 +52,9 @@
               <label>To</label>
               <input type="text" placeholder="City or airport" required>
             </div>
+          </div>
+
+          <div class="form-row">
             <div class="input-group">
               <label>Depart</label>
               <input type="date" required>
@@ -65,75 +64,51 @@
               <input type="date">
             </div>
             <div class="input-group">
-              <label>Family Size</label>
-              <select required>
+              <label>Travelers</label>
+              <select>
+                <option>1 adult</option>
                 <option>2 adults</option>
                 <option>2 adults, 1 child</option>
-                <option>2 adults, 2 children</option>
-                <option>Family of 4+</option>
+                <option>Family</option>
               </select>
             </div>
           </div>
 
-          <button type="submit" class="search-btn">Find Family Deals</button>
+          <button type="submit" class="search-btn">Search</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us – Family-focused benefits -->
-  <section class="why-section">
-    <h2>Travel Made Easy for Everyday Families</h2>
-    <p>We're for regular middle-income families who want simple, affordable trips during holidays. No stress — just happy memories.</p>
-    <div class="why-grid">
-      <div class="why-card">
-        <h3>Affordable Pricing</h3>
-        <p>Family bundle discounts, seasonal holiday deals, flexible packages, and early booking savings — value you can trust.</p>
-      </div>
-      <div class="why-card">
-        <h3>Stress-Free Planning</h3>
-        <p>We handle everything: visas, insurance, itineraries — so you focus on family time.</p>
-      </div>
-      <div class="why-card">
-        <h3>Safe & Fun for Kids</h3>
-        <p>Handpicked destinations with kid-friendly activities, safe environments, and family comfort.</p>
-      </div>
+  <!-- Trust signals (like KAYAK) -->
+  <section class="trust-bar">
+    <div class="trust-items">
+      <div><i class="fas fa-shield-alt"></i> Secure & Trusted</div>
+      <div><i class="fas fa-dollar-sign"></i> Best Price Guarantee</div>
+      <div><i class="fas fa-headset"></i> 24/7 Support</div>
     </div>
   </section>
 
-  <!-- Destinations – Family-friendly with images -->
+  <!-- Popular Destinations -->
   <section class="destinations">
-    <h2>Family-Friendly Destinations</h2>
-    <p>Curated spots for middle-income families — safe, affordable, and full of fun.</p>
+    <h2>Popular Destinations</h2>
     <div class="dest-grid">
       <div class="dest-card">
-        <img src="images/destination1.jpg" alt="Family beach resort">
-        <h3>Beach Resorts</h3>
-        <p>Safe shores & kids clubs – from $799/family</p>
+        <img src="images/destination1.jpg" alt="Paris">
+        <h3>Paris, France</h3>
+        <p>From $699 round-trip</p>
       </div>
       <div class="dest-card">
-        <img src="images/destination2.jpg" alt="Theme park adventure">
-        <h3>Theme Parks</h3>
-        <p>Magic for all ages – from $599/family</p>
+        <img src="images/destination2.jpg" alt="Bali">
+        <h3>Bali, Indonesia</h3>
+        <p>From $899 round-trip</p>
       </div>
       <div class="dest-card">
-        <img src="images/destination3.jpg" alt="Nature wildlife tour">
-        <h3>Nature Tours</h3>
-        <p>Safe adventures & learning – from $699/family</p>
+        <img src="images/destination3.jpg" alt="New York">
+        <h3>New York, USA</h3>
+        <p>From $499 round-trip</p>
       </div>
     </div>
-  </section>
-
-  <!-- CTA / Contact -->
-  <section class="cta-section">
-    <h2>Let's Plan Your Family Trip</h2>
-    <p>Reach out for custom, budget-friendly family packages.</p>
-    <div class="contact-info">
-      <p><strong>Email:</strong> journeys@journeywelltours.com</p>
-      <p><strong>Phone:</strong> +1 (905) 555-0123</p>
-      <p><strong>Office:</strong> Hamilton, Ontario, Canada</p>
-    </div>
-    <button class="cta-btn">Get Started Today</button>
   </section>
 
   <!-- Footer -->
@@ -144,8 +119,8 @@
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Use</a>
         <a href="#">About Us</a>
+        <a href="#">Contact</a>
       </div>
-      <p class="marketing">Find us on Facebook, Instagram, Google — or at schools, community centers, and family events.</p>
     </div>
   </footer>
 
