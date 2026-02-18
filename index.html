@@ -3,156 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JourneyWell Tours – Safe & Smooth Family Vacations</title>
+  <meta name="description" content="Search flights, hotels, rental cars and family packages with JourneyWell Tours – best deals for everyday families."/>
+  <title>JourneyWell Tours – Search Flights, Hotels & Family Deals</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
+  <!-- Simple top bar -->
+  <header class="top-bar">
     <div class="logo">
-      <h1>JourneyWell</h1>
-      <span>Tours</span>
+      <h1>JourneyWell Tours</h1>
     </div>
-
-    <button class="hamburger" aria-label="Toggle menu">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <div class="nav-links">
-      <a href="#flights">Flights</a>
-      <a href="#hotels">Hotels</a>
-      <a href="#packages">Packages</a>
-      <a href="#destinations">Destinations</a>
-      <a href="#contact">Contact</a>
+    <div class="user-actions">
+      <a href="#" class="sign-in">Sign in</a>
+      <button class="menu-btn"><i class="fas fa-bars"></i></button>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero with golden sunset glow -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Safe. Smooth.<br>Family Journeys</h1>
-      <p>We plan every detail so your everyday family can enjoy the adventure — without the stress.</p>
+  <!-- Main hero search – very KAYAK-like -->
+  <main class="hero">
+    <div class="hero-inner">
+      <h1>Search Flights, Hotels & More</h1>
+      <p>Get the best deals for your family trip</p>
 
-      <div class="search-container">
-        <div class="trip-type">
-          <button class="type-btn active">Round-trip</button>
-          <button class="type-btn">One-way</button>
+      <div class="search-box">
+        <div class="search-tabs">
+          <button class="tab active">Flights</button>
+          <button class="tab">Hotels</button>
+          <button class="tab">Cars</button>
+          <button class="tab">Packages</button>
         </div>
 
-        <div class="search-grid">
-          <div class="search-field">
-            <label>From</label>
-            <input type="text" placeholder="City or airport">
-          </div>
-          <div class="search-field">
-            <label>To</label>
-            <input type="text" placeholder="City or airport">
-          </div>
-          <div class="search-field">
-            <label>Depart</label>
-            <input type="date">
-          </div>
-          <div class="search-field">
-            <label>Return</label>
-            <input type="date">
-          </div>
-          <div class="search-field">
-            <label>Family</label>
-            <select>
-              <option>2 adults</option>
-              <option>2 adults, 1 child</option>
-              <option>2 adults, 2 children</option>
-            </select>
-          </div>
-        </div>
+        <form class="search-form">
+          <div class="form-fields">
+            <div class="field">
+              <label>From</label>
+              <input type="text" placeholder="City or airport" required>
+            </div>
 
-        <button class="search-btn">Find Family Deals</button>
+            <div class="field arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <div class="field">
+              <label>To</label>
+              <input type="text" placeholder="City or airport" required>
+            </div>
+
+            <div class="field date">
+              <label>Depart</label>
+              <input type="date" required>
+            </div>
+
+            <div class="field date">
+              <label>Return</label>
+              <input type="date">
+            </div>
+
+            <div class="field">
+              <label>Travelers</label>
+              <select>
+                <option>1 adult</option>
+                <option>2 adults</option>
+                <option>2 adults, 1 child</option>
+                <option>Family</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="search-button">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Popular destinations grid -->
+  <section class="popular-destinations">
+    <h2>Popular Family Destinations</h2>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <img src="images/destination1.jpg" alt="Beach family resort">
+        <div class="dest-info">
+          <h3>Beach Resorts</h3>
+          <p class="price">from $799</p>
+          <p>Family-friendly beaches & kids clubs</p>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <img src="images/destination2.jpg" alt="Theme park">
+        <div class="dest-info">
+          <h3>Theme Parks</h3>
+          <p class="price">from $599</p>
+          <p>Magic for kids, relaxation for parents</p>
+        </div>
+      </div>
+
+      <div class="dest-card">
+        <img src="images/destination3.jpg" alt="Nature adventure">
+        <div class="dest-info">
+          <h3>Nature Adventures</h3>
+          <p class="price">from $699</p>
+          <p>Safe, educational family outings</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Trust -->
+  <!-- Trust signals -->
   <section class="trust">
     <div class="trust-grid">
       <div class="trust-item">
         <i class="fas fa-shield-alt"></i>
-        <p>Safe & Kid-Friendly</p>
+        <span>Secure Booking</span>
       </div>
       <div class="trust-item">
         <i class="fas fa-dollar-sign"></i>
-        <p>Affordable Bundles</p>
+        <span>Best Price Guarantee</span>
       </div>
       <div class="trust-item">
-        <i class="fas fa-clock"></i>
-        <p>Stress-Free Planning</p>
+        <i class="fas fa-headset"></i>
+        <span>24/7 Support</span>
       </div>
     </div>
-  </section>
-
-  <!-- Destinations -->
-  <section class="destinations">
-    <h2>Family-Friendly Getaways</h2>
-    <div class="dest-grid">
-      <div class="dest-card">
-        <img src="images/destination1.jpg" alt="Family beach vacation">
-        <div class="dest-info">
-          <h3>Beach Resorts</h3>
-          <p>Safe shores & kids clubs</p>
-          <p class="price">From $799</p>
-        </div>
-      </div>
-      <div class="dest-card">
-        <img src="images/destination2.jpg" alt="Theme park family trip">
-        <div class="dest-info">
-          <h3>Theme Parks</h3>
-          <p>Magic for kids</p>
-          <p class="price">From $599</p>
-        </div>
-      </div>
-      <div class="dest-card">
-        <img src="images/destination3.jpg" alt="Nature family tour">
-        <div class="dest-info">
-          <h3>Nature & Wildlife</h3>
-          <p>Safe adventures</p>
-          <p class="price">From $699</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Ready for Your Family Adventure?</h2>
-    <p>Contact us for personalized, budget-friendly packages.</p>
-    <div class="contact-info">
-      <p><strong>Email:</strong> journeys@journeywelltours.com</p>
-      <p><strong>Phone:</strong> +1 (905) 555-0123</p>
-    </div>
-    <button class="cta-btn">Get in Touch</button>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 JourneyWell Tours – Made for Everyday Families</p>
-    <div class="social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
+    <div class="footer-inner">
+      <p>© 2026 JourneyWell Tours. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+      </div>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
     </div>
   </footer>
-
-  <!-- Hamburger Menu Script -->
-  <script>
-    document.querySelector('.hamburger').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('active');
-    });
-  </script>
 
 </body>
 </html>
