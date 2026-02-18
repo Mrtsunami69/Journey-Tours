@@ -3,44 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="JourneyWell Tours – Luxury travel, cheap flights, curated packages, and unforgettable destinations."/>
+  <meta name="description" content="JourneyWell Tours – Discover luxury travel, cheap flights, curated packages and unforgettable destinations worldwide."/>
   <title>JourneyWell Tours – Luxury Travel & Unbeatable Journeys</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Favicon (optional – add your own later) -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Favicon (replace with your own later) -->
+  <link rel="icon" href="https://via.placeholder.com/32/5c9f92/ffffff?text=J" type="image/png">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Premium Navbar -->
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
       <h1>JourneyWell</h1>
       <span>Tours</span>
     </div>
     <div class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="flights.html">Flights</a>
-      <a href="hotels.html">Hotels</a>
-      <a href="packages.html">Packages</a>
-      <a href="destinations.html">Destinations</a>
-      <a href="contact.html">Contact</a>
+      <a href="#flights">Flights</a>
+      <a href="#hotels">Hotels</a>
+      <a href="#packages">Packages</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero – Aspirational luxury -->
-  <section class="hero" id="flights">
+  <!-- Hero -->
+  <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Discover the World<br><span>Your Way</span></h1>
-      <p>Curated journeys, unbeatable flights, and memories that last a lifetime.</p>
+      <p>Curated journeys, unbeatable flights, luxury stays — memories that last forever.</p>
 
-      <!-- Professional Search Form -->
       <div class="search-form-container">
         <form class="search-form">
           <div class="trip-type">
@@ -52,15 +50,15 @@
           <div class="form-grid">
             <div class="input-group">
               <label>From</label>
-              <input type="text" placeholder="City or airport" required aria-required="true">
+              <input type="text" placeholder="City or airport" required>
             </div>
             <div class="input-group">
               <label>To</label>
-              <input type="text" placeholder="City or airport" required aria-required="true">
+              <input type="text" placeholder="City or airport" required>
             </div>
             <div class="input-group">
               <label>Depart</label>
-              <input type="date" required aria-required="true">
+              <input type="date" required>
             </div>
             <div class="input-group">
               <label>Return</label>
@@ -68,11 +66,11 @@
             </div>
             <div class="input-group">
               <label>Travelers</label>
-              <select required aria-required="true">
-                <option value="1">1 adult</option>
-                <option value="2">2 adults</option>
-                <option value="3">1 adult, 1 child</option>
-                <option value="4">2 adults, 1 child</option>
+              <select required>
+                <option>1 adult</option>
+                <option>2 adults</option>
+                <option>1 adult, 1 child</option>
+                <option>2 adults, 1 child</option>
               </select>
             </div>
           </div>
@@ -83,37 +81,28 @@
     </div>
   </section>
 
-  <!-- Trust Bar – Instant credibility -->
+  <!-- Trust signals -->
   <section class="trust-bar">
     <div class="trust-items">
-      <div class="trust-item">
-        <span class="icon" aria-hidden="true">✓</span>
-        <p>Best Price Guarantee</p>
-      </div>
-      <div class="trust-item">
-        <span class="icon" aria-hidden="true">🔒</span>
-        <p>Secure Booking</p>
-      </div>
-      <div class="trust-item">
-        <span class="icon" aria-hidden="true">24/7</span>
-        <p>Expert Support</p>
-      </div>
+      <div><span class="icon">✓</span> Best Price Guarantee</div>
+      <div><span class="icon">🔒</span> Secure Booking</div>
+      <div><span class="icon">24/7</span> Expert Support</div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="services">
-    <h2>Why JourneyWell</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>Exclusive Flight Deals</h3>
+  <!-- Why Choose Us -->
+  <section class="why-us">
+    <h2>Why Journey with Us</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Exclusive Deals</h3>
         <p>Access unpublished fares from 500+ airlines worldwide.</p>
       </div>
-      <div class="service-card">
+      <div class="why-card">
         <h3>Handpicked Stays</h3>
         <p>Luxury hotels, resorts & boutique properties — personally selected.</p>
       </div>
-      <div class="service-card">
+      <div class="why-card">
         <h3>Curated Journeys</h3>
         <p>Stress-free packages designed for modern travelers.</p>
       </div>
@@ -121,43 +110,37 @@
   </section>
 
   <!-- Destinations -->
-  <section id="destinations" class="destinations">
+  <section class="destinations">
     <h2>Trending Escapes</h2>
     <div class="dest-grid">
       <div class="dest-card">
-        <img src="images/destination1.jpg" alt="Santorini Sunset over Caldera">
-        <div class="dest-info">
-          <h3>Santorini, Greece</h3>
-          <p>From $799</p>
-        </div>
+        <img src="images/destination1.jpg" alt="Santorini at sunset">
+        <h3>Santorini, Greece</h3>
+        <p>From $799</p>
       </div>
       <div class="dest-card">
-        <img src="images/destination2.jpg" alt="Maldives Overwater Villa">
-        <div class="dest-info">
-          <h3>Maldives</h3>
-          <p>From $1,499</p>
-        </div>
+        <img src="images/destination2.jpg" alt="Maldives overwater villa">
+        <h3>Maldives</h3>
+        <p>From $1,499</p>
       </div>
       <div class="dest-card">
-        <img src="images/destination3.jpg" alt="Kyoto Cherry Blossoms">
-        <div class="dest-info">
-          <h3>Kyoto, Japan</h3>
-          <p>From $1,199</p>
-        </div>
+        <img src="images/destination3.jpg" alt="Kyoto cherry blossoms">
+        <h3>Kyoto, Japan</h3>
+        <p>From $1,199</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact & CTA -->
-  <section id="contact" class="contact">
-    <h2>Ready to Begin?</h2>
-    <p>Our travel experts are here to craft your perfect journey.</p>
-    <div class="contact-info">
-      <p><strong>Email:</strong> journeys@journeywelltours.com</p>
-      <p><strong>Phone:</strong> +1 (905) 555-0123</p>
-      <p><strong>Office:</strong> Hamilton, Ontario, Canada</p>
+  <!-- CTA / Contact -->
+  <section class="cta-section">
+    <h2>Ready to Begin Your Journey?</h2>
+    <p>Contact our travel experts today</p>
+    <div class="contact-row">
+      <div>Email: <strong>journeys@journeywelltours.com</strong></div>
+      <div>Phone: <strong>+1 (905) 555-0123</strong></div>
+      <div>Office: Hamilton, Ontario, Canada</div>
     </div>
-    <button class="cta-btn">Get in Touch</button>
+    <button class="cta-btn">Get in Touch →</button>
   </section>
 
   <!-- Footer -->
@@ -171,5 +154,6 @@
       </div>
     </div>
   </footer>
+
 </body>
 </html>
