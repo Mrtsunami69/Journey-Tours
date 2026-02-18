@@ -12,9 +12,9 @@
 </head>
 <body>
 
-  <!-- Top bar with menu, heart, sign in -->
+  <!-- Top bar -->
   <header class="top-bar">
-    <button class="menu-btn"><i class="fas fa-bars"></i></button>
+    <button class="menu"><i class="fas fa-bars"></i></button>
     <div class="logo">JOURNEY</div>
     <div class="actions">
       <button class="heart"><i class="far fa-heart"></i></button>
@@ -22,7 +22,7 @@
     </div>
   </header>
 
-  <!-- Hero search – exact KAYAK layout -->
+  <!-- Hero search -->
   <section class="hero">
     <div class="hero-content">
       <h1>Start your travel planning here</h1>
@@ -38,7 +38,7 @@
 
         <form class="search-form">
           <div class="form-row">
-            <div class="input-group trip-type">
+            <div class="input-group trip">
               <select>
                 <option>Round-trip</option>
                 <option>One-way</option>
@@ -50,7 +50,7 @@
               <input type="text" placeholder="Toronto (YTO)" value="Toronto (YTO)">
             </div>
 
-            <button type="button" class="swap-btn"><i class="fas fa-exchange-alt"></i></button>
+            <button type="button" class="swap"><i class="fas fa-exchange-alt"></i></button>
 
             <div class="input-group to">
               <input type="text" placeholder="To?">
@@ -87,62 +87,64 @@
     </div>
   </section>
 
-  <!-- Popular Destinations grid -->
-  <section class="popular">
-    <div class="popular-grid">
-      <div class="popular-item">
-        <h3>Las Vegas</h3>
-        <p>CARS · FLIGHTS · HOTELS</p>
+  <!-- Travel deals under $226 -->
+  <section class="deals">
+    <h2>Travel deals under $226</h2>
+    <a href="#" class="explore">Explore more ></a>
+
+    <div class="deals-grid">
+      <div class="deal-card">
+        <img src="images/halifax.jpg" alt="Halifax">
+        <div class="deal-info">
+          <h3>Halifax</h3>
+          <p>2h 40m non-stop</p>
+          <p class="price">from $93</p>
+        </div>
       </div>
-      <div class="popular-item">
-        <h3>New York</h3>
-        <p>CARS · FLIGHTS · HOTELS</p>
+      <div class="deal-card">
+        <img src="images/orlando.jpg" alt="Orlando">
+        <div class="deal-info">
+          <h3>Orlando</h3>
+          <p>3h 10m non-stop</p>
+          <p class="price">from $128</p>
+        </div>
       </div>
-      <div class="popular-item">
-        <h3>London</h3>
-        <p>CARS · FLIGHTS · HOTELS</p>
+      <div class="deal-card">
+        <img src="images/fort-myers.jpg" alt="Fort Myers">
+        <div class="deal-info">
+          <h3>Fort Myers</h3>
+          <p>3h 20m non-stop</p>
+          <p class="price">from $139</p>
+        </div>
       </div>
-      <div class="popular-item">
-        <h3>Paris</h3>
-        <p>CARS · FLIGHTS · HOTELS</p>
+      <div class="deal-card">
+        <img src="images/fort-lauderdale.jpg" alt="Fort Lauderdale">
+        <div class="deal-info">
+          <h3>Fort Lauderdale</h3>
+          <p>3h 28m non-stop</p>
+          <p class="price">from $149</p>
+        </div>
       </div>
-      <div class="popular-item">
-        <h3>Los Angeles</h3>
-        <p>CARS · FLIGHTS · HOTELS</p>
-      </div>
-      <div class="popular-item">
-        <h3>Miami</h3>
-        <p>CARS · FLIGHTS · HOTELS</p>
-      </div>
-      <div class="popular-item">
-        <h3>Orlando</h3>
-        <p>CARS · FLIGHTS · HOTELS</p>
-      </div>
-      <div class="popular-item">
-        <h3>Rome</h3>
-        <p>CARS · FLIGHTS · HOTELS</p>
-      </div>
-      <!-- Add more rows/columns to match screenshot -->
     </div>
   </section>
 
   <!-- For travel pros -->
-  <section class="tools">
+  <section class="pros">
     <h2>For travel pros</h2>
-    <div class="tools-grid">
-      <div class="tool-card">
-        <h3>JourneyWell.ai BETA</h3>
+    <div class="pros-grid">
+      <div class="pros-card">
+        <h3>KAYAK.ai BETA</h3>
         <p>Get travel questions answered</p>
       </div>
-      <div class="tool-card">
+      <div class="pros-card">
         <h3>Best Time to Travel</h3>
         <p>Know when to save</p>
       </div>
-      <div class="tool-card">
+      <div class="pros-card">
         <h3>Explore</h3>
         <p>See destinations on your budget</p>
       </div>
-      <div class="tool-card">
+      <div class="pros-card">
         <h3>Trips</h3>
         <p>Keep all your plans in one place</p>
       </div>
