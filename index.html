@@ -9,128 +9,123 @@
 </head>
 <body>
 
-  <!-- Top bar with logo + sign in -->
+  <!-- Top bar -->
   <header class="top-bar">
     <div class="logo">JourneyWell</div>
     <div class="right">
       <a href="#" class="sign-in">Sign in</a>
-      <button class="menu"><i class="fas fa-bars"></i></button>
+      <button class="menu-btn"><i class="fas fa-bars"></i></button>
     </div>
   </header>
 
-  <!-- Main search hero -->
+  <!-- Hero search (very KAYAK-like) -->
   <section class="hero">
-    <div class="search-wrapper">
-      <h1>Search Flights, Hotels & Rental Cars</h1>
+    <div class="hero-content">
+      <h1>Compare flight deals from 100s of sites.</h1>
 
       <div class="search-box">
-        <div class="trip-options">
-          <button class="option active">Round-trip</button>
-          <button class="option">One-way</button>
-          <button class="option">Multi-city</button>
+        <div class="trip-tabs">
+          <button class="tab active">Flights</button>
+          <button class="tab">Stays</button>
+          <button class="tab">Cars</button>
+          <button class="tab">Packages</button>
         </div>
 
-        <div class="fields">
-          <div class="field">
-            <label>From</label>
-            <input type="text" placeholder="Toronto (YTO)" value="Toronto (YTO)">
+        <form class="main-form">
+          <div class="form-row">
+            <div class="field trip-type">
+              <select>
+                <option>Round-trip</option>
+                <option>One-way</option>
+                <option>Multi-city</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <input type="text" placeholder="From (e.g. Toronto YTO)" value="Toronto (YTO)">
+            </div>
+
+            <div class="swap-icon"><i class="fas fa-exchange-alt"></i></div>
+
+            <div class="field">
+              <input type="text" placeholder="To?">
+            </div>
+
+            <div class="field date">
+              <input type="date" placeholder="Depart">
+            </div>
+
+            <div class="field date">
+              <input type="date" placeholder="Return">
+            </div>
+
+            <div class="field">
+              <select>
+                <option>1 adult</option>
+                <option>2 adults</option>
+                <option>1 adult, 1 child</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <select>
+                <option>Economy</option>
+                <option>Premium</option>
+              </select>
+            </div>
+
+            <button class="search-btn"><i class="fas fa-search"></i> Search</button>
           </div>
-
-          <div class="swap"><i class="fas fa-exchange-alt"></i></div>
-
-          <div class="field">
-            <label>To</label>
-            <input type="text" placeholder="To?">
-          </div>
-
-          <div class="field date">
-            <label>Depart</label>
-            <input type="date">
-          </div>
-
-          <div class="field date">
-            <label>Return</label>
-            <input type="date">
-          </div>
-
-          <div class="field">
-            <label>Travelers</label>
-            <select>
-              <option>1 adult</option>
-              <option>2 adults</option>
-              <option>1 adult, 1 child</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label>Class</label>
-            <select>
-              <option>Economy</option>
-              <option>Premium</option>
-            </select>
-          </div>
-
-          <button class="search-button">
-            <i class="fas fa-search"></i> Search
-          </button>
-        </div>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- Deals section -->
-  <section class="deals">
+  <!-- Deals under $226 -->
+  <section class="deals-section">
     <h2>Travel deals under $226</h2>
     <div class="deals-grid">
       <div class="deal-card">
         <img src="images/deal1.jpg" alt="Halifax">
-        <div class="deal-info">
-          <p>Halifax • 2h 40m non-stop</p>
-          <p class="price">from $93</p>
-        </div>
+        <p>Halifax • 2h 40m non-stop</p>
+        <p class="price">from $93</p>
       </div>
       <div class="deal-card">
         <img src="images/deal2.jpg" alt="Orlando">
-        <div class="deal-info">
-          <p>Orlando • 3h 10m non-stop</p>
-          <p class="price">from $128</p>
-        </div>
+        <p>Orlando • 3h 10m non-stop</p>
+        <p class="price">from $128</p>
       </div>
       <div class="deal-card">
         <img src="images/deal3.jpg" alt="Fort Myers">
-        <div class="deal-info">
-          <p>Fort Myers • 3h 20m non-stop</p>
-          <p class="price">from $139</p>
-        </div>
+        <p>Fort Myers • 3h 20m non-stop</p>
+        <p class="price">from $139</p>
       </div>
       <div class="deal-card">
         <img src="images/deal4.jpg" alt="Fort Lauderdale">
-        <div class="deal-info">
-          <p>Fort Lauderdale • 3h 28m non-stop</p>
-          <p class="price">from $149</p>
-        </div>
+        <p>Fort Lauderdale • 3h 28m non-stop</p>
+        <p class="price">from $149</p>
       </div>
     </div>
-    <a href="#" class="explore">Explore more deals →</a>
+    <a href="#" class="explore-btn">Explore more →</a>
   </section>
 
-  <!-- Tools for pros -->
-  <section class="tools">
+  <!-- For travel pros -->
+  <section class="pro-tools">
     <h2>For travel pros</h2>
     <div class="tools-grid">
-      <div class="tool">
+      <div class="tool-card">
         <h3>JourneyWell.ai</h3>
         <p>Get travel questions answered</p>
       </div>
-      <div class="tool">
+      <div class="tool-card">
         <h3>Best Time to Travel</h3>
         <p>Know when to save</p>
       </div>
-      <div class="tool">
+      <div class="tool-card">
         <h3>Explore</h3>
         <p>See destinations on your budget</p>
       </div>
-      <div class="tool">
+      <div class="tool-card">
         <h3>Trips</h3>
         <p>Keep all your plans in one place</p>
       </div>
