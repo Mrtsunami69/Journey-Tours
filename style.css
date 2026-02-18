@@ -1,58 +1,37 @@
-/* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #1a1a1a;
+  margin: 0;
   background: #fff;
-  line-height: 1.5;
+  color: #1a1a1a;
 }
 
-/* Top Nav */
 .top-nav {
   position: fixed;
   top: 0;
   width: 100%;
   background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 0.8rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   z-index: 1000;
 }
 
 .logo h1 {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   color: #ff5a5f;
-  font-weight: 700;
+  margin: 0;
 }
 
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.sign-in {
+.nav-right a {
   color: #006ce4;
   font-weight: 500;
+  margin-left: 1.5rem;
   text-decoration: none;
 }
 
-.menu-btn {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-}
-
-/* Hero – KAYAK-style */
+/* Hero + Search */
 .hero {
   height: 100vh;
   min-height: 680px;
@@ -60,98 +39,73 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: url('images/hero.jpg') center/cover no-repeat;
-  filter: brightness(0.6);
+  background: #f0f4f8;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
+  text-align: center;
   max-width: 1100px;
   padding: 0 1.5rem;
 }
 
 .hero h1 {
-  font-size: clamp(2.8rem, 7vw, 4.5rem);
-  font-weight: 700;
+  font-size: clamp(2.8rem, 7vw, 4.8rem);
   margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
-.hero p {
-  font-size: clamp(1.2rem, 3vw, 1.4rem);
-  margin-bottom: 2.5rem;
-}
-
-/* Search Container */
-.search-container {
+.search-wrapper {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  padding: 1.8rem;
   max-width: 980px;
-  margin: 0 auto;
-  overflow: hidden;
+  margin: 2rem auto;
 }
 
-.search-tabs {
+.trip-options {
   display: flex;
-  background: #f1f3f5;
-  padding: 0.6rem 1.2rem;
-}
-
-.tab {
-  padding: 0.7rem 1.6rem;
-  background: transparent;
-  border: none;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #495057;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.tab.active {
-  background: white;
-  border-radius: 8px;
-  color: #ff5a5f;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.search-form {
-  padding: 1.8rem 2.2rem;
-}
-
-.form-row {
-  display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
   margin-bottom: 1.2rem;
-  flex-wrap: wrap;
 }
 
-.input-group {
+.option {
+  padding: 0.6rem 1.4rem;
+  border: none;
+  background: #f1f3f5;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.option.active {
+  background: #ff5a5f;
+  color: white;
+}
+
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.field {
   flex: 1;
-  min-width: 180px;
+  min-width: 160px;
   position: relative;
 }
 
-.input-group label {
+.field label {
   position: absolute;
   top: -8px;
-  left: 14px;
+  left: 12px;
   background: white;
   padding: 0 6px;
   font-size: 0.8rem;
   color: #6c757d;
 }
 
-.input-group input,
-.input-group select {
+.field input, .field select {
   width: 100%;
   padding: 0.9rem 1rem;
   border: 1px solid #ced4da;
@@ -159,99 +113,126 @@ body {
   font-size: 0.95rem;
 }
 
-.search-btn {
-  width: 100%;
+.swap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #6c757d;
+  min-width: 40px;
+}
+
+.search-button {
   background: #ff5a5f;
   color: white;
   border: none;
-  padding: 1rem;
+  padding: 0 2rem;
   font-size: 1.1rem;
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.2s;
+  min-width: 140px;
 }
 
-.search-btn:hover {
+.search-button:hover {
   background: #e04e53;
 }
 
-/* Trust Bar */
-.trust-bar {
-  background: #fff;
-  padding: 2rem 5%;
-  text-align: center;
-  border-bottom: 1px solid #e9ecef;
-}
-
-.trust-items {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-
-.trust-item {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 1rem;
-  color: #495057;
-}
-
-/* Destinations */
-.destinations {
+/* Deals section */
+.deals {
   padding: 4rem 5% 6rem;
-  background: #fff;
+  background: white;
 }
 
-.dest-grid {
+.deals h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+}
+
+.deals-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1.8rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.dest-card {
-  background: white;
+.deal-card {
+  background: #f8f9fa;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s;
 }
 
-.dest-card:hover {
+.deal-card:hover {
   transform: translateY(-6px);
 }
 
-.dest-card img {
+.deal-card img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
 }
 
-.dest-info {
+.deal-info {
   padding: 1.2rem;
   text-align: center;
 }
 
-.dest-info h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.4rem;
+.deal-info p {
+  margin: 0.3rem 0;
+  color: #495057;
 }
 
-.dest-info p {
+.price {
   color: #ff5a5f;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.explore {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+  color: #006ce4;
+  text-decoration: none;
   font-weight: 600;
+}
+
+/* Tools section */
+.tools {
+  padding: 4rem 5%;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+.tool {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.tool h3 {
+  margin-bottom: 0.8rem;
 }
 
 /* Footer */
 footer {
   background: #1a1a1a;
-  color: #ccc;
-  text-align: center;
+  color: #aaa;
   padding: 3rem 5%;
+  text-align: center;
 }
 
 .footer-links a {
@@ -266,11 +247,9 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .navbar { padding: 1rem 5%; }
-  .nav-links { display: none; }
-  .menu-btn { display: block; }
+  .top-nav { padding: 1rem 5%; }
   .hero h1 { font-size: 2.8rem; }
-  .search-container { margin: 1rem; }
-  .form-row { flex-direction: column; }
-  .trust-items { gap: 1.5rem; }
+  .search-wrapper { padding: 1.5rem; }
+  .fields { flex-direction: column; }
+  .deals-grid { grid-template-columns: 1fr; }
 }
