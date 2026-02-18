@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="JourneyWell Tours – Safe, smooth, stress-free family vacations. Affordable packages & curated journeys."/>
-  <title>JourneyWell Tours – Where Families Travel Well</title>
+  <meta name="description" content="JourneyWell Tours – Safe, smooth, stress-free family vacations. Affordable packages & curated journeys for everyday families."/>
+  <title>JourneyWell Tours – Safe. Smooth. Family Journeys</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -33,12 +35,13 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Safe. Smooth.<br>Family Journeys</h1>
-      <p>We plan every detail so your everyday family can just enjoy the adventure — without the stress.</p>
+      <p class="hero-subtitle">We plan every detail so your everyday family can just enjoy the adventure — without the stress.</p>
 
       <div class="search-container">
         <div class="trip-type">
           <button class="type-btn active">Round-trip</button>
           <button class="type-btn">One-way</button>
+          <button class="type-btn">Multi-city</button>
         </div>
 
         <div class="search-grid">
@@ -64,6 +67,7 @@
               <option>2 adults</option>
               <option>2 adults, 1 child</option>
               <option>2 adults, 2 children</option>
+              <option>Family of 4+</option>
             </select>
           </div>
         </div>
@@ -73,7 +77,7 @@
     </div>
   </section>
 
-  <!-- Trust & Value -->
+  <!-- Trust -->
   <section class="trust">
     <div class="trust-grid">
       <div class="trust-item">
@@ -82,7 +86,7 @@
       </div>
       <div class="trust-item">
         <i class="fas fa-dollar-sign"></i>
-        <p>Affordable Family Bundles</p>
+        <p>Affordable Bundles</p>
       </div>
       <div class="trust-item">
         <i class="fas fa-clock"></i>
@@ -96,19 +100,28 @@
     <h2>Family-Friendly Getaways</h2>
     <div class="dest-grid">
       <div class="dest-card">
-        <img src="images/destination1.jpg" alt="Family beach vacation">
-        <h3>Beach Resorts</h3>
-        <p>Safe shores & kids clubs • From $799</p>
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Family beach vacation">
+        <div class="dest-info">
+          <h3>Beach Resorts</h3>
+          <p>Safe shores & kids clubs</p>
+          <p class="price">From $799</p>
+        </div>
       </div>
       <div class="dest-card">
-        <img src="images/destination2.jpg" alt="Theme park family trip">
-        <h3>Theme Parks</h3>
-        <p>Magic for kids • From $599</p>
+        <img src="https://images.unsplash.com/photo-1564507592333-c3c2899a6e0d?w=800" alt="Theme park family trip">
+        <div class="dest-info">
+          <h3>Theme Parks</h3>
+          <p>Magic for kids, relaxation for parents</p>
+          <p class="price">From $599</p>
+        </div>
       </div>
       <div class="dest-card">
-        <img src="images/destination3.jpg" alt="Nature family tour">
-        <h3>Nature & Wildlife</h3>
-        <p>Safe adventures • From $699</p>
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Nature family tour">
+        <div class="dest-info">
+          <h3>Nature & Wildlife</h3>
+          <p>Safe adventures & learning</p>
+          <p class="price">From $699</p>
+        </div>
       </div>
     </div>
   </section>
@@ -116,10 +129,11 @@
   <!-- CTA -->
   <section class="cta">
     <h2>Ready for Your Family Adventure?</h2>
-    <p>Contact us for personalized, budget-friendly packages.</p>
+    <p>Contact us today for personalized, stress-free family travel.</p>
     <div class="contact-info">
-      <p>Email: journeys@journeywelltours.com</p>
-      <p>Phone: +1 (905) 555-0123</p>
+      <p><strong>Email:</strong> journeys@journeywelltours.com</p>
+      <p><strong>Phone:</strong> +1 (905) 555-0123</p>
+      <p><strong>Office:</strong> Hamilton, Ontario, Canada</p>
     </div>
     <button class="cta-btn">Get in Touch</button>
   </section>
@@ -130,6 +144,7 @@
     <div class="social">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
   </footer>
 
