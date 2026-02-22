@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - JourneyWell Tours</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Inline CSS for animated bubble with visible background image -->
+  <style>
+    .about-section {
+      padding: 8rem 5% 6rem;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .about-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+      opacity: 0.45;  /* image visibility - increase to 0.6 for stronger */
+      z-index: 0;
+    }
+
+    .about-section::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(248, 249, 250, 0.78);  /* light overlay for readability */
+      z-index: 1;
+    }
+
+    .about-bubble {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-radius: 28px;
+      padding: 4rem 3.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      box-shadow: 0 25px 60px rgba(0, 108, 228, 0.25);
+      border: 1px solid rgba(0, 108, 228, 0.15);
+      position: relative;
+      z-index: 2;
+      animation: fadeInUp 1.4s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(60px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .about-bubble h2 {
+      font-size: 3.2rem;
+      color: #006ce4;
+      margin-bottom: 2.2rem;
+      text-align: center;
+    }
+
+    .about-bubble p {
+      font-size: 1.28rem;
+      line-height: 2;
+      color: #333;
+      margin-bottom: 1.8rem;
+    }
+
+    .about-bubble strong {
+      color: #006ce4;
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Navbar with Logo -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+      <img src="images/logo.png" alt="JourneyWell Tours Logo" style="height: 55px; width: auto; margin-right: 12px;">
+      <h1 style="font-size: 0.99rem; margin: 0; color: #006ce4;">JourneyWell Tours</h1>
+    </a>
+  </div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">What We Do</a>
+    <a href="Our-Products.html">Travel Product</a>
+    <a href="extras.html">Extras</a>
+    <a href="insurance.html">Travel Insurance</a>
+    <a href="documentation.html">Travel Documentation</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  </nav>
+
+  <!-- About Us Section with Centered Text -->
+  <section class="about-section">
+    <div class="about-bubble">
+      <h2>About Us</h2>
+      <p style="text-align: center; font-size: 1.28rem; line-height: 2; margin-bottom: 1.8rem;">
+        JourneyWell Tours is a family-focused travel agency based in Hamilton, Ontario. We specialize in creating affordable, safe, and well-planned vacations for everyday families middle-income households who travel during school holidays and want stress-free experiences without luxury prices.
+      </p>
+      <p style="text-align: center; font-size: 1.28rem; line-height: 2; margin-bottom: 1.8rem;">
+        Our team has years of experience understanding what families really need: convenience, value, safety, and peace of mind. We bundle flights, hotels, cars, activities, and extras so parents can relax and enjoy time with their kids.
+      </p>
+      <p style="text-align: center; font-size: 1.28rem; line-height: 2; margin-bottom: 1.8rem;">
+        Our employees are registered with the Travel Industry Council of Ontario (TICO) and many hold the Certified Travel Counsellor (CTC) designation. This ensures professional expertise, ethical standards, and consumer protection. We are also members of industry associations like Travel Leaders Network for access to preferred rates, training, and marketing support.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 JourneyWell Tours - College Project</p>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p style="font-size: 0.9rem; color: #aaa; margin-top: 1rem;">
+      <strong>Fake TICO Registration #:</strong> 1234567 (for educational purposes only)<br>
+      <strong>Disclaimer:</strong> This travel agency is not real and is created only for a student project (TOUR 10015).
+    </p>
+  </footer>
+
+</body>
+</html>
