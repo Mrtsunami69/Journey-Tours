@@ -21,7 +21,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 1000;
+  flex-wrap: wrap; /* allows items to wrap on small screens */
+  min-height: 70px; /* minimum height, auto-adjusts with content */
 }
 
 html {
@@ -33,12 +35,20 @@ html {
   color: #006ce4;
 }
 
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .nav-links a {
-  margin-left: 2rem;
+  margin-left: 0; /* removed old margin - using gap instead */
   color: #333;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
+  font-size: 1rem;
 }
 
 .nav-links a:hover {
@@ -575,33 +585,37 @@ footer {
 
 /* Navbar Logo Styling */
 .navbar {
-  position: fixed;  /* or sticky, but fixed is safer for consistency */
+  position: fixed;
   top: 0;
   width: 100%;
   background: white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 1rem 5%; /* controls height */
+  padding: 1rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  min-height: 70px; /* auto height, grows with content */
 }
 
 .logo h1 {
-  font-size: 1.8rem; /* uniform across pages */
+  font-size: 1.8rem;
   color: #006ce4;
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 1rem; /* uniform size */
+  font-size: 1rem;
   transition: color 0.3s;
 }
 
@@ -609,47 +623,46 @@ footer {
   color: #006ce4;
 }
 
-.hero {
-  padding-top: 110px; /* match navbar + extra spacing */
-}
-
-/* MOBILE RESPONSIVE STYLING */
+/* MOBILE RESPONSIVE STYLING - Auto height, stack layout, better spacing */
 @media (max-width: 768px) {
-
-  /* Navbar */
   .navbar {
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
     padding: 1rem 3%;
+    min-height: auto; /* auto height on mobile */
+    gap: 1rem;
+  }
+
+  .logo h1 {
+    font-size: 1.6rem; /* slightly smaller on mobile */
   }
 
   .nav-links {
     flex-direction: column;
     width: 100%;
+    gap: 1rem;
     text-align: center;
   }
 
   .nav-links a {
-    margin: 0.5rem 0;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    padding: 0.6rem 0;
   }
 
   /* Hero Section */
   .hero {
     min-height: 60vh;
-    padding-top: 120px;
+    padding-top: 140px; /* more space for stacked navbar */
   }
 
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
-  /* Search Box */
+  /* Search & Form */
   .search-box {
     padding: 1.5rem 1rem;
     max-width: 95%;
@@ -676,66 +689,51 @@ footer {
     gap: 1.2rem;
   }
 
-  .card, .category-card, .info-bubble {
-    max-width: 100%;
-  }
-
   .card img, .category-img {
     height: 180px;
   }
 
-  /* Section Styling */
+  /* Sections */
   .section {
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
     margin: 1rem auto;
   }
 
   .section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
   }
 
   .section p, .section ul, .section ol {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
+    font-size: 1.05rem;
   }
 
-  .section ul, .section ol {
-    padding-left: 1.5rem;
-  }
-
-  /* Info Bubble */
-  .info-bubble {
-    padding: 1.8rem 1.5rem;
-  }
-
-  /* Trust Items */
-  .trust-items {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  /* Contact */
-  .contact-info {
+  /* Contact Form */
+  .contact-info p {
     font-size: 1rem;
   }
 
-  .contact-btn {
-    width: 100%;
-    padding: 0.8rem;
-  }
-
-  /* Modal */
-  .modal-content {
-    width: 95%;
-    padding: 1.5rem;
-  }
-
-  /* Footer links */
+  /* Footer */
   .links a {
     display: block;
-    margin: 0.3rem 0;
+    margin: 0.6rem 0;
+  }
+}
+
+/* Extra small devices (phones below 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 4%;
   }
 
+  .logo h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
 }
